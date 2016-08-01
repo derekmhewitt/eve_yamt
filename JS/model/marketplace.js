@@ -4,7 +4,7 @@
 
 	var frontPageObjects = [];
 	var marketplaceObjects = [];
-
+	var databaseID = 35;
 	eveData.frontPageData = function() {
 		$.get('/eve-central/api/marketstat/json?hours=1&typeid=37&typeid=16272&typeid=16683&typeid=1227')
 		.done(function(oneHourData) {
@@ -40,7 +40,7 @@
 			// console.log(marketplaceObjects);
 		});
 	};
-
+	eveData.pullEveData();
 	eveData.frontPageData();
 
 	module.eveData = eveData;
