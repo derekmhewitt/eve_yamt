@@ -2,7 +2,59 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Welcome to Firebase Hosting</title>
+    <title>Eve YAMT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBTDwhgmDUufkYuupiJBjYw_mW5GydYog8",
+        authDomain: "eve-yamt.firebaseapp.com",
+        databaseURL: "https://eve-yamt.firebaseio.com",
+        storageBucket: "",
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/ui/live/0.4/firebase-ui-auth.js"></script>
+
+    <script type="text/javascript">
+          // FirebaseUI config.
+      var uiConfig = {
+        // Query parameter name for mode.
+        'queryParameterForWidgetMode': 'mode',
+        // Query parameter name for sign in success url.
+        'queryParameterForSignInSuccessUrl': 'signInSuccessUrl',
+        'signInSuccessUrl': '/marketplace',
+        'signInOptions': [
+          // Leave the lines as is for the providers you want to offer your users.
+          // firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+          // firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+          // firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+          firebase.auth.EmailAuthProvider.PROVIDER_ID
+        ],
+        // Terms of service url.
+        'tosUrl': '/index.html',
+        'callbacks': {
+          'signInSuccess': function(currentUser, credential, redirectUrl) {
+            firebase.User = currentUser;
+            // Do something.
+            // Return type determines whether we continue the redirect automatically
+            // or whether we leave that to developer to handle.
+            return true;
+          }
+        }
+      };
+
+      var ui = new firebaseui.auth.AuthUI(firebase.auth());
+      // The start method will wait until the DOM is loaded.
+      ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
+
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/live/0.4/firebase-ui-auth.css" />
+    <link rel="stylesheet" href="Vendor/reset.css">
+    <link rel="stylesheet" href="Styles/base.css">
+    <link rel="stylesheet" href="Styles/layout.css">
+    <link rel="stylesheet" href="Styles/modules.css">
     <style media="screen">
       body {
         font-family: Roboto, Arial, sans-serif;
@@ -58,12 +110,26 @@
     </style>
   </head>
   <body>
-    <div id="message">
-      <h1>Welcome to Firebase Hosting</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <ul>
-        <li><a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a></li>
-      </ul>
-    </div>
+    <header>
+    </header>
+    <div id="firebaseui-auth-container"></div>
+    <main>
+      <div id="marketplace" class="tab-content">
+      </div>
+      <div id="about-eve" class="tab-content">
+      </div>
+      <div id="about-us" class="tab-content">
+      </div>
+      <div id="main-page" class="tab-content">
+      </div>
+    </main>
+    <footer>
+    </footer>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="JS/controller/routes.js"></script>
+    <script src="JS/model/categories.js"></script>
+    <script src="JS/model/marketplace.js"></script>
   </body>
 </html>
