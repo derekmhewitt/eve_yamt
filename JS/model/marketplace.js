@@ -3,8 +3,7 @@
 	var eveData = {};
 
 	var frontPageObjects = [];
-
-	var databaseID = '35';
+	var marketplaceObjects = [];
 
 	eveData.frontPageData = function() {
 		$.get('/eve-central/api/marketstat/json?hours=1&typeid=37&typeid=16272&typeid=16683&typeid=1227')
@@ -16,6 +15,8 @@
 						frontPageObjects.push({
 							name: '',
 							id: twoHour.all.forQuery.types[0],
+							buyAvg: oneHour.buy.avg.toFixed(2),
+							sellAvg: oneHour.sell.avg.toFixed(2),
 							oneHourAvg: oneHour.all.avg.toFixed(2),
 							twoHourAvg: twoHour.all.avg.toFixed(2)
 						});
@@ -28,10 +29,14 @@
 	eveData.pullEveData = function() {
 		$.get('/eve-central/api/marketstat/json?typeid=' + databaseID)
 		.done(function(data){
-			console.log(data);
-			console.log('all avg:', (data[0].all.avg).toFixed(2), 'all max', (data[0].all.max).toFixed(2), 'all min', (data[0].all.min).toFixed(2));
-			console.log('buy avg:', (data[0].buy.avg).toFixed(2), 'buy max', (data[0].buy.max).toFixed(2), 'buy min', (data[0].buy.min).toFixed(2));
-			console.log('sell avg:', (data[0].sell.avg).toFixed(2), 'sell max', (data[0].sell.max).toFixed(2), 'sell min', (data[0].sell.min).toFixed(2));
+			marketplaceObjects.push({
+				name: '',
+				id: databaseID,
+				avg: data[0].all.avg.toFixed(2),
+				max: data[0].all.max.toFixed(2),
+				min: data[0].all.min.toFixed(2)
+			});
+			// console.log(marketplaceObjects);
 		});
 	};
 
