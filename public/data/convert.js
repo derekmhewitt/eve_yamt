@@ -40,4 +40,10 @@ var data = $.get('tempSample.txt').done(processData);
 // var data = $.get('id_eight.txt').done(processData);
 
 //next we push the result into the firebase database as a json object
-firebase.database().push(eveItemsArray);
+// $('convertButton').on(firebase.database().setValue(eveItemsArray));
+
+function setDataInDatabase() {
+  firebase.database('eve-yamt').setValue(eveItemsArray);
+};
+
+setDataInDatabase();
