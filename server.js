@@ -19,7 +19,7 @@ app.use(express.static('./'));
 
 app.get('*', function(request, response) {
   console.log('New request: ', request.url);
-  response.sendFile('index.html', {root: '.'});
+  response.sendFile('public/index.html', {root: '.'});
 });
 
 app.listen(port, function() {

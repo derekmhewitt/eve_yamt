@@ -49,13 +49,30 @@
       // The start method will wait until the DOM is loaded.
       ui.start('#firebaseui-auth-container', uiConfig);
     </script>
-
+    <script id="front-page-template" type="text/x-handlebars-template">
+    // <!-- *****************Handlebars Template ******************** -->
+    <ul>
+      <li>{{name}}</li>
+      <li>{{buyAvg}}</li>
+      <li>{{sellAvg}}</li>
+      <li id="upArrow"></li>
+      <li id="downArrow"></li>
+    </ul>
+    </script>
+    <script id="marketplace-template" type="text/x-handlebars-template">
+      <ul>
+        <li>{{name}}</li>
+        <li>{{avg}}</li>
+        <li>{{max}}</li>
+        <li>{{min}}</li>
+      </ul>
+    </script>
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/live/0.4/firebase-ui-auth.css" />
     <link rel="stylesheet" href="Vendor/reset.css">
     <link rel="stylesheet" href="Styles/base.css">
     <link rel="stylesheet" href="Styles/layout.css">
     <link rel="stylesheet" href="Styles/modules.css">
-    <style media="screen">
+    <!-- /*<style media="screen">
       body {
         font-family: Roboto, Arial, sans-serif;
         background: #ECEFF1;
@@ -107,7 +124,7 @@
         font-size: 14px;
         box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
       }
-    </style>
+    </style>*/ -->
   </head>
   <body>
     <header>
@@ -115,6 +132,7 @@
     <div id="firebaseui-auth-container"></div>
     <main>
       <div id="marketplace" class="tab-content">
+        <ul id="search-output"> Search Output</ul>
       </div>
       <div id="about-eve" class="tab-content">
       </div>
@@ -129,7 +147,7 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script src="JS/controller/routes.js"></script>
-    <script src="JS/model/categories.js"></script>
+    <!-- <script src="JS/model/categories.js"></script> -->
     <script src="JS/model/marketplace.js"></script>
   </body>
 </html>
