@@ -1,24 +1,40 @@
 //constructor function
 
 var eveItemsArray = [];
+var dataArray = [];
+
+var idNumbers = [];
+var itemNamesArray = [];
 
 var EveItem = function(firstString, secondString) {
   this.idNum = firstString;
   this.itemName = secondString;
   eveItemsArray.push(this);
 };
+
 //pull in the data
-var data = $.get('typeid.txt');
-
 var processData = function(data) {
+  // console.log(data);
+  dataArray = data.split(/\r\n|\r|\n/);
   //select 1 line of text at a time
-  var dataArray = data.split(/\r\n|\r|\n/);
-  console.log(dataArray);
-
+  dataArray.forEach(function(current, index, array) {
+    idNumbers.push(current.match(/\d+/)[0]);
+    //delete item # and leading white space
+    itemNamesArray.push(current.replace(/\d+\s+/, ''));
+  });
+  idNumbers.forEach(function(current, index, array) {
+    console.log('made it this far', current);
+    new EveItem(current, itemNamesArray[index]);
+  });
 };
-//slice on the first space
-//(\w+)\s+
-//assign first word, which should be the id #s, to this.idNum
-//assign the rest to this.itemName
 
-//push the result into the firebase database as a json object
+var data = $.get('id_one.txt').done(processData);
+var data = $.get('id_two.txt').done(processData);
+var data = $.get('id_three.txt').done(processData);
+var data = $.get('id_four.txt').done(processData);
+var data = $.get('id_five.txt').done(processData);
+var data = $.get('id_six.txt').done(processData);
+var data = $.get('id_seven.txt').done(processData);
+var data = $.get('id_eight.txt').done(processData);
+
+//next we push the result into the firebase database as a json object
