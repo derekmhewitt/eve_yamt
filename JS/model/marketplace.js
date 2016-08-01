@@ -16,6 +16,8 @@
 						frontPageObjects.push({
 							name: '',
 							id: twoHour.all.forQuery.types[0],
+							buyAvg: oneHour.buy.avg.toFixed(2),
+							sellAvg: oneHour.sell.avg.toFixed(2),
 							oneHourAvg: oneHour.all.avg.toFixed(2),
 							twoHourAvg: twoHour.all.avg.toFixed(2)
 						});
@@ -30,12 +32,11 @@
 		.done(function(data){
 			console.log(data);
 			console.log('all avg:', (data[0].all.avg).toFixed(2), 'all max', (data[0].all.max).toFixed(2), 'all min', (data[0].all.min).toFixed(2));
-			console.log('buy avg:', (data[0].buy.avg).toFixed(2), 'buy max', (data[0].buy.max).toFixed(2), 'buy min', (data[0].buy.min).toFixed(2));
-			console.log('sell avg:', (data[0].sell.avg).toFixed(2), 'sell max', (data[0].sell.max).toFixed(2), 'sell min', (data[0].sell.min).toFixed(2));
 		});
 	};
 
 	eveData.frontPageData();
+	eveData.pullEveData();
 
 	module.eveData = eveData;
 
