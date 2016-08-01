@@ -3,8 +3,14 @@
 	var eveData = {};
 
 	eveData.pullEveData = function() {
-		$.get('')
+		$.get('/eve-central/api/marketstat/json?typeid=35')
+		.done(function(data){
+			console.log(data);
+		});
 	}
 
+	eveData.pullEveData();
+
+	module.eveData = eveData;
 
 })(window);
