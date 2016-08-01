@@ -12,12 +12,12 @@ var data = $.get('typeid.txt');
 
 var processData = function(data) {
   //select 1 line of text at a time
-  var dataArray = data.split(/(\w+)\s+\r\n|\r|\n/);
+  var dataArray = data.split(/\r\n|\r|\n/);
   console.log(dataArray);
 
 };
 //slice on the first space
-
+//(\w+)\s+
 //assign first word, which should be the id #s, to this.idNum
 //assign the rest to this.itemName
 
