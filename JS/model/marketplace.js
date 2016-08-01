@@ -3,6 +3,7 @@
 	var eveData = {};
 
 	var frontPageObjects = [];
+	var marketplaceObjects = [];
 
 	var databaseID = '35';
 
@@ -30,8 +31,15 @@
 	eveData.pullEveData = function() {
 		$.get('/eve-central/api/marketstat/json?typeid=' + databaseID)
 		.done(function(data){
-			console.log(data);
-			console.log('all avg:', (data[0].all.avg).toFixed(2), 'all max', (data[0].all.max).toFixed(2), 'all min', (data[0].all.min).toFixed(2));
+			// console.log(data);
+			marketplaceObjects.push({
+				name: '',
+				id: databaseID,
+				avg: data[0].all.avg.toFixed(2),
+				max: data[0].all.max.toFixed(2),
+				min: data[0].all.min.toFixed(2)
+			})
+			console.log(marketplaceObjects);
 		});
 	};
 
