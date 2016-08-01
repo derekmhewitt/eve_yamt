@@ -13,7 +13,7 @@ var proxyEve = function(request, response) {
 	)(request, response);
 };
 
-app.get('/eve-central/');
+app.get('/eve-central/*', proxyEve);
 
 app.use(express.static('./'));
 
