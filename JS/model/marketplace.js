@@ -20,6 +20,7 @@
 							oneHourAvg: oneHour.all.avg.toFixed(2),
 							twoHourAvg: twoHour.all.avg.toFixed(2)
 						});
+						console.log(frontPageObjects);
 					});
 				});
 			});
