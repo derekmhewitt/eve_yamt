@@ -8,7 +8,7 @@
   var searchQuery = $('#customize-input').value;
 
   customizeModel.findItem = function(searchQuery) {
-    query = firebase.database().ref('/itemData/').equalTo('itemName' + searchQuery).once('value').then(
+    query = database.ref('/itemData/').orderByChild('itemName').equalTo(searchQuery).once('value').then(
       function(data) {
         console.log(data.val());
       }
