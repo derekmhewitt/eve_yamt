@@ -1,10 +1,11 @@
+
 (function(module){
 
   	var singleSearchController = {};
   
-  	singleSearchController.index = function() {
-    	$('.tab-content').hide();
-    	$('#singleSearchController').fadeIn(350);
+  	singleSearchController.controller = function() {
+    	$('.search-content').hide();
+    	$('#single-search').fadeIn(350);
   	}
   
   	module.singleSearchController = singleSearchController;

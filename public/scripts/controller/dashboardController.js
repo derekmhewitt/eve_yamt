@@ -1,9 +1,10 @@
+
 (function(module){
 
   	var dashboardController = {};
   
-  	dashboardController.index = function() {
-    	$('.tab-content').hide();
+  	dashboardController.controller = function() {
+    	$('.search-content').hide();
     	$('#dashboard').fadeIn(350);
 	};
 

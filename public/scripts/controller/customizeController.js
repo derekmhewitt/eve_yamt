@@ -1,10 +1,11 @@
+
 (function(module){
 
   	var customizeController = {};
   
-  	customizeController.index = function() {
-    	$('.tab-content').hide();
-    	$('#customize').fadeIn(350);
+  	customizeController.controller = function() {
+    	$('.search-content').hide();
+    	$('#customize-search').fadeIn(350);
   	};
 	
 	module.customizeController = customizeController;

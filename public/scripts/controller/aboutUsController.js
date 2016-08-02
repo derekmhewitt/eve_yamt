@@ -1,8 +1,9 @@
+
 (function(module){
 
 	var aboutUsController = {};
   	
-  	customizeController.index = function() {
+  	aboutUsController.controller = function() {
     	$('.tab-content').hide();
     	$('#aboutUs').fadeIn(350);
  	};
