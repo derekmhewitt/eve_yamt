@@ -15,11 +15,11 @@ var proxyEve = function(request, response) {
 
 app.get('/eve-central/*', proxyEve);
 
-app.use(express.static('./'));
+app.use(express.static('./public'));
 
 app.get('*', function(request, response) {
   console.log('New request: ', request.url);
-  response.sendFile('public/index.html', {root: '.'});
+  response.sendFile('index.html', {root: './public'});
 });
 
 app.listen(port, function() {
