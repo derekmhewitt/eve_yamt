@@ -5,7 +5,7 @@
   customizeView.renderCustomize = function() {
     $('').empty().append(   .withTheAttribute('name').map(customizeCompiler));
   };
-  customizeObj.requestRepos(customizeView.renderCustomize);
+  customizeObj.request(customizeView.renderCustomize);
   module.customizeView = customizeView;
 
 })(window);
