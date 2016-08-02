@@ -1,8 +1,9 @@
+
 (function(module){
 
-  	var indexControllers = {};
+  	var indexController = {};
   
-  	indexController.index = function() {
+  	indexController.controller = function() {
     	$('.tab-content').hide();
     	$('#index').fadeIn(350);
   	};

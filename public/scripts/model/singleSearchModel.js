@@ -1,12 +1,10 @@
+
 (function(module) {
 
 	var singleData = {};
 
 	var singleObjects = [];
-	var singleQuery = {
-	    // "idNum": "18",
-	    // "itemName": "Plagioclase"
-	  };
+	var singleQuery = {};
 
 	singleData.displayDataObject = function() {
 		$.get('/eve-central/api/marketstat/json?typeid=' + singleQuery.idNum)

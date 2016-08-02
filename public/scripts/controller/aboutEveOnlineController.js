@@ -1,8 +1,9 @@
+
 (function(module){
 
 	var aboutEveController = {};
 	
-	aboutEveController.index = function() {
+	aboutEveController.controller = function() {
     	$('.tab-content').hide();
     	$('#aboutEve').fadeIn(350);
 	};
