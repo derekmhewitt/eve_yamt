@@ -1,3 +1,4 @@
+
 (function(module) {
   var customizeView = {};
   var customizeCompiler = Handlebars.compile($('#customize-template').text());
@@ -6,4 +7,5 @@
   };
   customizeObj.requestRepos(customizeView.renderCustomize);
   module.customizeView = customizeView;
+
 })(window);
