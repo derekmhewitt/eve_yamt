@@ -49,7 +49,7 @@
       // The start method will wait until the DOM is loaded.
       ui.start('#firebaseui-auth-container', uiConfig);
     </script>
-    <script id="front-page-template" type="text/x-handlebars-template">
+    <script id="index-template" type="text/x-handlebars-template">
     <!-- *****************Handlebars Template ******************** -->
     <ul>
       <li>{{name}}</li>
@@ -65,7 +65,12 @@
         <li>{{avg}}</li>
         <li>{{max}}</li>
         <li>{{min}}</li>
+        <li id="upArrow"></li>
+        <li id="downArrow"></li>
       </ul>
+    <script id="customize-template" type="text/x-handlebars-template">
+    </script>
+    <script id="single-search-template" type="text/x-handlebars-template">
     </script>
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/live/0.4/firebase-ui-auth.css" />
     <link rel="stylesheet" href="/vendor/styles/reset.css"/>
@@ -128,9 +133,7 @@
     </style>
   </head>
   <body>
-    <header></header>
-    <div id="firebaseui-auth-container"></div>
-    <main>
+    <header>
       <nav class="main-nav">
         <div class="icon-menu"></div>
         <ul>
@@ -140,7 +143,9 @@
           <li class="tab" data-content="about-eve" id="navigation"><a href="/about-eve" class="">About EVE Online</a></li>
         </ul>
       </nav>
-
+    </header>
+    <div id="firebaseui-auth-container"></div>
+    <main>
       <div id="marketplace" class="tab-content">
         <ul id="search-output"> Search Output</ul>
       </div>
@@ -154,6 +159,7 @@
     <script src="/vendor/scripts/handlebars.js"></script>
     <script src="/vendor/scripts/page.js"></script>
     <!-- Controller Scripts -->
+    <script src="/scripts/controller/routes.js"></script>
     <script src="/scripts/controller/aboutEveOnlineController.js"></script>
     <script src="/scripts/controller/aboutUsController.js"></script>
     <script src="/scripts/controller/customizeController.js"></script>
