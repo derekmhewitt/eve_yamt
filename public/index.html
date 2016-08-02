@@ -68,10 +68,10 @@
       </ul>
     </script>
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/live/0.4/firebase-ui-auth.css" />
-    <link rel="stylesheet" href="Vendor/reset.css">
-    <link rel="stylesheet" href="Styles/base.css">
-    <link rel="stylesheet" href="Styles/layout.css">
-    <link rel="stylesheet" href="Styles/modules.css">
+    <link rel="stylesheet" href="vendor/styles/reset.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/modules.css">
     <!-- /*<style media="screen">
       body {
         font-family: Roboto, Arial, sans-serif;
@@ -127,38 +127,51 @@
     </style>*/ -->
   </head>
   <body>
-    <header>
-    </header>
+    <header></header>
     <div id="firebaseui-auth-container"></div>
     <main>
       <nav class="main-nav">
         <div class="icon-menu"></div>
         <ul>
           <li class="tab" data-content="home" id="navigation"><a href="/" class="">Home</a></li>
-          <li class="tab" data-content="market" id="navigation>"><a href="/market" class="">market</a></li>
+          <li class="tab" data-content="market" id="navigation>"><a href="/market" class="">Market</a></li>
           <li class="tab" data-content="about" id="navigation"><a href="/about" class="">About</a></li>
-          <li class="tab" data-content="about-eve" id="navigation"><a href="/about-eve" class="">about-eve</a></li>
+          <li class="tab" data-content="about-eve" id="navigation"><a href="/about-eve" class="">About EVE Online</a></li>
         </ul>
       </nav>
 
       <div id="marketplace" class="tab-content">
         <ul id="search-output"> Search Output</ul>
       </div>
-      <div id="about-eve" class="tab-content">
-      </div>
-      <div id="about-us" class="tab-content">
-      </div>
-      <div id="main-page" class="tab-content">
-      </div>
+      <div id="about-eve" class="tab-content"></div>
+      <div id="about-us" class="tab-content"></div>
+      <div id="main-page" class="tab-content"></div>
     </main>
-    <footer>
-    </footer>
-    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-    <script src="JS/controller/routes.js"></script>
-    <script src="js/page.js"></script>
-    <!-- <script src="JS/model/categories.js"></script> -->
-    <script src="JS/model/marketplace.js"></script>
+    <footer></footer>
+    <!-- Vendor Scripts -->
+    <script src="vendor/scripts/jquery.js"></script>
+    <script src="vendor/scripts/handlebars.js"></script>
+    <script src="vendor/scripts/page.js"></script>
+    <!-- Controller Scripts -->
+    <script src="scripts/controller/aboutEveOnlineController.js"></script>
+    <script src="scripts/controller/aboutUsController.js"></script>
+    <script src="scripts/controller/customizeController.js"></script>
+    <script src="scripts/controller/dashboardController.js"></script>
+    <script src="scripts/controller/indexController.js"></script>
+    <script src="scripts/controller/singleSearchController.js"></script>
+    <!-- Model Scripts -->
+    <script src="scripts/model/aboutEveOnlineModel.js"></script>
+    <script src="scripts/model/aboutUsModel.js"></script>
+    <script src="scripts/model/customizeModel.js"></script>
+    <script src="scripts/model/dashboardModel.js"></script>
+    <script src="scripts/model/indexModel.js"></script>
+    <script src="scripts/model/singleSearchModel.js"></script>
+    <!-- View Scripts -->
+    <script src="scripts/view/aboutEveOnlineView.js"></script>
+    <script src="scripts/view/aboutUsView.js"></script>
+    <script src="scripts/view/customizeView.js"></script>
+    <script src="scripts/view/dashboardView.js"></script>
+    <script src="scripts/view/indexView.js"></script>
+    <script src="scripts/view/singleSearchView.js"></script>
   </body>
 </html>
