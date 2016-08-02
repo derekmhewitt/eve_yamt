@@ -47,7 +47,7 @@ var data;
 // $.get('id_five.txt').done(processData);
 // $.get('id_six.txt').done(processData);
 // $.get('id_seven.txt').done(processData);
-$.get('id_eight.txt').done(processData);
+// $.get('id_eight.txt').done(processData);
 
 //next we push the result into the firebase database as a json object
 // $('convertButton').on(firebase.database().setValue(eveItemsArray));
