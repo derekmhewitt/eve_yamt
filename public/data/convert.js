@@ -1,5 +1,4 @@
-//constructor function
-
+//this code was used to generate the data that now lives in the firebase realtime database
 var eveItemsArray = [];
 var dataArray = [];
 
@@ -21,14 +20,10 @@ var EveItem = function(firstString, secondString, destination) {
   destination.push(this);
 };
 
-//pull in the data
 var processData = function(data, destination) {
-  // console.log(data);
   dataArray = data.split(/\r\n|\r|\n/);
-  //select 1 line of text at a time
   dataArray.forEach(function(current, index, array) {
     idNumbers.push(current.match(/\d+/)[0]);
-    //delete item # and leading white space
     itemNamesArray.push(current.replace(/\d+\s+/, ''));
   });
   idNumbers.forEach(function(current, index, array) {
@@ -37,9 +32,8 @@ var processData = function(data, destination) {
   });
 };
 
-// var data = $.get('tempSample.txt').done(processData);
 var data;
-
+// var data = $.get('tempSample.txt').done(processData);
 // $.get('id_one.txt').done(processData);
 // $.get('id_two.txt').done(processData);
 // $.get('id_three.txt').done(processData);
@@ -49,18 +43,16 @@ var data;
 // $.get('id_seven.txt').done(processData);
 // $.get('id_eight.txt').done(processData);
 
-//next we push the result into the firebase database as a json object
-// $('convertButton').on(firebase.database().setValue(eveItemsArray));
+//This code was used to generate the names array from output.json for the jqueryui autocomplete.
 
-// function setDataInDatabase() {
-//   firebase.database('eve-yamt').setValue(eveItemsArray);
-// };
-// setDataInDatabase();
-
-// var post = function(filename) {
-//   $.ajax({
-//     type: 'POST',
-//     url: '' + filename + '',
-//     data: eveItemsArray,
-//   });
-// };
+//import and parse output.json
+var autocompleteResults = [];
+var autocompleteRaw = $.getJSON('output.json', data, workMagic);
+//for each it
+//for each thing, push the itemName value into an array
+var workMagic = function() {
+  autocompleteRaw.forEach(function(current, index, array) {
+    current.itemName.value.push(autocompleteResults);
+  });
+};
+//copy that array into a new file
