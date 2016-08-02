@@ -1,9 +1,12 @@
 (function(module){
-  var dashboardController = {};
-  dashboardController.index = function() {
 
+  	var dashboardController = {};
+  
+  	dashboardController.index = function() {
+    	$('.tab-content').hide();
+    	$('#dashboard').fadeIn(350);
+	};
 
-  };
-module.dashboardController = dashboardController;
+	module.dashboardController = dashboardController;
 
 })(window);
