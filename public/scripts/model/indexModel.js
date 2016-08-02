@@ -4,33 +4,33 @@
 
 	var indexObjects = [];
 	var indexQuery = [
-		{
-   	 		"idNum": "16",
-   	 		"itemName": "Stargate (Caldari System)"
-  		},
-  		{
-   	 		"idNum": "17",
-   	 		"itemName": "Stargate (Amarr Constellation)"
-  		},
-  		{
-   	 		"idNum": "18",
-   	 		"itemName": "Plagioclase"
-  		},
-  		{
-   	 		"idNum": "19",
-   	 		"itemName": "Spodumain"
-  		},
-  		{
-   	 		"idNum": "20",
-   	 		"itemName": "Kernite"
-  		},
-  		{
-   			"idNum": "21",
-   	 		"itemName": "Hedbergite"
-  		}
+		// {
+  //  	 		"idNum": "16",
+  //  	 		"itemName": "Stargate (Caldari System)"
+  // 		},
+  // 		{
+  //  	 		"idNum": "17",
+  //  	 		"itemName": "Stargate (Amarr Constellation)"
+  // 		},
+  // 		{
+  //  	 		"idNum": "18",
+  //  	 		"itemName": "Plagioclase"
+  // 		},
+  // 		{
+  //  	 		"idNum": "19",
+  //  	 		"itemName": "Spodumain"
+  // 		},
+  // 		{
+  //  	 		"idNum": "20",
+  //  	 		"itemName": "Kernite"
+  // 		},
+  // 		{
+  //  			"idNum": "21",
+  //  	 		"itemName": "Hedbergite"
+  // 		}
 	];
 
-	indexData.displayDataObject = function() {
+	indexData.displayDataObject = function(call) {
 		dataQuery.map(function(queryObject) {
 			$.get('/eve-central/api/marketstat/json?hours=1&typeid=' + queryObject.idNum)
 			.done(function(oneHourData) {
@@ -46,13 +46,15 @@
 								oneHourAvg: oneHour.all.avg.toFixed(2),
 								twoHourAvg: twoHour.all.avg.toFixed(2)
 							});
-							// console.log(indexObjects);
+							console.log(call);
 						});
 					});
 				});
 			});
 		});
 	};
+
+	indexData.displayDataObject(indexObjects);
 
 	module.indexData = indexData;
 

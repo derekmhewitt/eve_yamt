@@ -1,9 +1,9 @@
 
-page('/',indexController.index);
-page('/',singleSearchController.index);
-page('/',aboutEveOnlineController.index);
-page('/',aboutusController.index);
-page('/',customizeController.index);
-page('/',dashboardController.index);
+page('/', indexController.index);
+page('/singleSearch', singleSearchController.index);
+page('/aboutEveOnline', aboutEveOnlineController.index);
+page('/aboutUs', aboutUsController.index);
+page('/customView', customizeController.index);
+page('/dashboard', dashboardController.index);
 
 page();

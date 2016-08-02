@@ -4,8 +4,8 @@
 
 	var singleObjects = [];
 	var singleQuery = {
-	    "idNum": "18",
-	    "itemName": "Plagioclase"
+	    // "idNum": "18",
+	    // "itemName": "Plagioclase"
 	  };
 
 	singleData.displayDataObject = function() {
