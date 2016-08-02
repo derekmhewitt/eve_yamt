@@ -1,8 +1,9 @@
 (function(module){
   var aboutUsController = {};
-  aboutUsController.index = function(){
-
-
+  customizeController.index = function() {
+    $('.tab-content').hide();
+    $('#about').fadeIn();
   };
+  
 module.aboutUsController = aboutUsController;
 })(window);
