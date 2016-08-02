@@ -8,7 +8,11 @@
   var searchQuery = $('#customize-input').value;
 
   customizeModel.findItem = function(searchQuery) {
-    query = firebase.database().ref('/itemData/' + searchQuery).once('value').then(console.log('it works!')/*callback*/);
+    query = firebase.database().ref('/itemData/').equalTo('itemName' + searchQuery).once('value').then(
+      function(data) {
+        console.log(data.val());
+      }
+    );
   };
   module.customizeModel = customizeModel;
 })(window);
