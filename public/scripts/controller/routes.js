@@ -1,9 +1,14 @@
 
-page('/', indexController.controller);
-page('/single', singleSearchController.controller);
-page('/aboutEveOnline', aboutEveOnlineController.controller);
-page('/aboutUs', aboutUsController.controller);
-page('/customize', customizeController.controller);
-page('/dashboard', dashboardController.controller);
+(function(module) {
 
-page();
+	page('/', indexController.index);
+	page('/search', searchController.index);
+	page('/aboutEveOnline', aboutEveController.index);
+	page('/aboutUs', aboutUsController.index);
+	page('/single', singleController.index);
+	page('/customize', customizeController.index);
+	page('/dashboard', dashboardController.index);
+
+	page();
+
+})(window);

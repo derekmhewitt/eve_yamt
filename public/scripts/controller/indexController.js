@@ -1,12 +1,11 @@
 
 (function(module){
 
-  	var indexController = {};
-  
-  	indexController.controller = function() {
-    	$('.tab-content').hide();
-    	$('#index').fadeIn(350);
-  	};
+  	var indexController = {  
+	  	index: function() {
+	    	$('#home').fadeIn(350).siblings().hide;
+	  	}
+	};
 
 	module.indexController = indexController;
 

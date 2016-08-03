@@ -2,7 +2,7 @@
 (function(module) {
   	
   	var indexView = {};
-  	var indexCompiler = Handlebars.compiler($('#(index-template)').text());
+  	var indexCompiler = Handlebars.compile($('#index-template').text());
   
   	indexView.render = function() {
     	('').empty().append();
