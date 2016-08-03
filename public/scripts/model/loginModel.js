@@ -25,6 +25,7 @@
     });
     $('#new-account-user-email').val('');
     $('#new-account-user-password').val('');
+    page('/dashboard');
   };
 
   $('#sign-out').on('click', function() {
@@ -42,6 +43,7 @@
 
   loginModel.signedIn = function() {
     var user = firebase.auth().currentUser;
+    page('/dashboard');
     if(user) {
       loginView.loggedIn();
       if(error) {
