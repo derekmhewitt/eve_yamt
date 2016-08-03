@@ -6,6 +6,7 @@
         $('.tab-content').hide();
 	    	$('#home').fadeIn(350);
 	  	}
+	  	indexData.displayDataObject();
 	};
 
 	module.indexController = indexController;
