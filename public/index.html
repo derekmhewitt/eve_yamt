@@ -69,6 +69,34 @@
     <script id="customize-template" type="text/x-handlebars-template">
     </script>
     <script id="single-search-template" type="text/x-handlebars-template">
+      <ul>
+        <li>{{name}}</li>
+        <li>{{{symbol}}}</li>
+        <li>
+          <h4>All:</h4>
+          <ul id="all-prices" class="prices-list">
+            <li>Max {{allMax}}</li>
+            <li>Avg {{allAvg}}</li>
+            <li>Min {{allMin}}</li>
+          </ul>
+        </li>
+        <li>
+          <h4>Buy:</h4>
+          <ul id="buy-prices" class="prices-list">
+            <li>Max {{buyMax}}</li>
+            <li>Avg {{buyAvg}}</li>
+            <li>Min {{buyMin}}</li>
+          </ul>
+        </li>
+        <li>
+          <h4>Sell:</h4>
+          <ul id="sell-prices" class="prices-list">
+            <li>Max {{sellMax}}</li>
+            <li>Avg {{sellAvg}}</li>
+            <li>Min {{sellMin}}</li>
+          </ul>
+        </li>
+      </ul>
     </script>
     <link rel="stylesheet" href="/vendor/styles/firebaseLogin.css"/>
     <link rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/live/0.4/firebase-ui-auth.css"/>
