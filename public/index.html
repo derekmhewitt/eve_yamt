@@ -81,7 +81,12 @@
     <link rel="stylesheet" href="/styles/modules.css"/>
   </head>
   <body>
-    <header>
+    <header></header>
+
+    <div id="firebaseui-auth-container"></div>
+    
+    <main>
+      <!-- Nav Bar -->
       <nav class="main-nav">
         <div class="icon-menu"></div>
         <ul>
@@ -91,11 +96,7 @@
           <li class="tab" data-content="about-eve" id="navigation"><a href="/about-eve">About EVE Online</a></li>
         </ul>
       </nav>
-    </header>
-
-    <div id="firebaseui-auth-container"></div>
-    
-    <main>
+      <!-- Content Sections -->
       <div id="home" class="tab-content">
         <h2>Hourly Stats...</h2>
       </div>
@@ -125,8 +126,7 @@
       <div id="about-us" class="tab-content">
         <h2>About us will go here...</h2>
       </div>
-    </main>
-    
+    </main>  
     <footer></footer>
     
     <!-- Vendor Scripts -->
