@@ -1,12 +1,13 @@
 
 (function(module){
 
-  	var aboutUsController = {  
+  	var aboutUsController = {
 	  	index: function() {
-	    	$('#about-us').fadeIn(350).siblings().hide;
+        $('.tab-content').hide();
+	    	$('#about-us').fadeIn(350);
 	  	}
 	};
-  
+
 	module.aboutUsController = aboutUsController;
 
 })(window);

@@ -84,51 +84,59 @@
     <header></header>
 
     <div id="firebaseui-auth-container"></div>
-    
+
     <main>
       <!-- Nav Bar -->
-      <nav class="main-nav">
-        <div class="icon-menu"></div>
-        <ul>
-          <li class="tab" data-content="home" id="navigation"><a href="/">Home</a></li>
-          <li class="tab" data-content="market" id="navigation"><a href="/search">Search</a></li>
-          <li class="tab" data-content="about" id="navigation"><a href="/about">About</a></li>
-          <li class="tab" data-content="about-eve" id="navigation"><a href="/about-eve">About EVE Online</a></li>
-        </ul>
-      </nav>
+      <header>
+        <nav class="main-nav">
+          <div class="icon-menu"></div>
+          <ul>
+            <li class="tab" data-content="home" id="home-navigation"><a href="/">Home</a></li>
+            <li class="tab" data-content="single-search" id="single-search-navigation"><a href="/single-search">Single Item Search</a></li>
+            <li class="tab" data-content="customize" id="customize-navigation"><a href="/user-page">User Dashboard</a></li>
+            <li class="tab" data-content="about" id="navigation"><a href="/about-us">About</a></li>
+            <li class="tab" data-content="about-eve" id="navigation"><a href="/about-eve">About EVE Online</a></li>
+          </ul>
+        </nav>
+      </header>
       <!-- Content Sections -->
-      <div id="home" class="tab-content">
-        <h2>Hourly Stats...</h2>
-      </div>
-      <div id="search" class="tab-content">
-        <ul>
-          <li class="search-tab" data-content="customize" id="search-navigation"><a href="/customize">Customize</a></li>
-          <li class="search-tab" data-content="single" id="search-navigation"><a href="/single">Single Search</a></li>
-          <li class="search-tab" data-content="dashboard" id="search-navigation"><a href="/dashboard">Dashboard</a></li>
-        </ul>
-        <section id="single-search" class="search-content">
-          <form>
-            <input id="single"></input>
-            <button id="single-button">Search</button>
-          </form>
-        </section>
+      <section id="home" class="tab-content">
+        <h2>This is the home page with #home id!</h2>
+      </section>
+      <section id="single-search" class="search-content tab-content">
+        <h2>This is the single search page that will show the results of a single item query at a time</h2>
+        <!-- <li class="search-tab" data-content="single" id="search-navigation"><a href="/single">Single Search</a></li> -->
+        <form>
+          <input id="single"></input>
+          <button id="single-button">Search</button>
+        </form>
+      </section>
+      <section id="user-page" class="tab-content">
+        <h2>This is user page where customize and dashboard live</h2>
+        <nav>
+          <ul>
+            <li class="search-tab" data-content="customize" id="search-navigation"><a href="/customize">Customize</a></li>
+            <li class="search-tab" data-content="dashboard" id="search-navigation"><a href="/dashboard">Dashboard</a></li>
+          </ul>
+        </nav>
         <section id="customize" class="search-content">
           <form>
             <input id="customize-input"></input>
             <button id="customize-button">Search</button>
           </form>
         </section>
-        <section id="dashboard" class="search-content"></section>
-      </div>
-      <div id="about-eve" class="tab-content">
+        <section id="dashboard" class="search-content">
+          <h2>This is the dashboard the user will see while they're logged in that will show their customized veiw.  Woo!</h2>
+        </section>
+      </section>
+      <section id="about-eve" class="tab-content">
         <h2>About EVE will go here...</h2>
-      </div>
-      <div id="about-us" class="tab-content">
+      </section>
+      <section id="about-us" class="tab-content">
         <h2>About us will go here...</h2>
-      </div>
-    </main>  
-    <footer></footer>
-    
+      </section>
+    </main>
+    <footer>Some copyright message here!</footer>
     <!-- Vendor Scripts -->
     <script src="/vendor/scripts/jquery.js"></script>
     <script src="/vendor/scripts/handlebars.js"></script>
@@ -142,7 +150,7 @@
     <script src="/scripts/model/singleSearchModel.js"></script>
     <!-- Controller Scripts -->
     <script src="/scripts/controller/indexController.js"></script>
-    <script src="/scripts/controller/searchController.js"></script>
+    <script src="/scripts/controller/userController.js"></script>
     <script src="/scripts/controller/aboutEveOnlineController.js"></script>
     <script src="/scripts/controller/aboutUsController.js"></script>
     <script src="/scripts/controller/customizeController.js"></script>
@@ -156,6 +164,5 @@
     <script src="/scripts/view/dashboardView.js"></script>
     <script src="/scripts/view/indexView.js"></script>
     <script src="/scripts/view/singleSearchView.js"></script>
-  
   </body>
 </html>
