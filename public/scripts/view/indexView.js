@@ -2,8 +2,6 @@
 (function(module) {
   	
   	var indexView = {};
-
-
   
   	indexView.render = function() {
 	  	var indexSource = $('#index-template').html();
@@ -20,14 +18,9 @@
 	  		}
 	  		$('#home').append(indexContent(currentObject));
 	  	});
-	  	// .map(function(currentEntry) {
-	  	// 	console.log('current entry appended', currentEntry);
-	  	// });
 	};
 
 	indexView.render();
-   //  	('#home').append(indexTemplate);
-  	// indexObj.request(indexView,render);
 
   	module.indexView = indexView;
 
