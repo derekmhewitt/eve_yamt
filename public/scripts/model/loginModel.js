@@ -10,19 +10,21 @@
 
   var loginModel = {};
 
-  $('#new-account').on('click', function(event) {
+  $('#new-account-form-submit').on('click', function(event) {
     event.preventDefault();
     loginModel.register();
   });
 
   loginModel.register = function() {
-    var email = $('new-account-user-email').val();
-    var password = $('new-account-user-password').val();
+    var email = $('#new-account-user-email').val();
+    var password = $('#new-account-user-password').val();
     firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
       var errorCode = error.code;
       var errorMessage = error.message;
       console.log('Error ', errorCode, errorMessage);
     });
+    $('#new-account-user-email').val('');
+    $('#new-account-user-password').val('');
   };
 
   $('#sign-out').on('click', function() {
@@ -47,6 +49,14 @@
       }
     }
   };
+
+  firebase.auth().onAuthStateChanged(function(user) {
+    if(user) {
+      loginView.loggedIn();
+    } else {
+      loginView.loggedOut();
+    }
+  });
 
   module.loginModel = loginModel;
 })(window);
