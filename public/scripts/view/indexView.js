@@ -5,7 +5,7 @@
   	var indexSource = $('#index-template').html();
   	var indexContent = Handlebars.compile(indexSource);
   
-  	indexView.render = function(currentObject) {
+  	indexView.render = function(currentObject) {tenlia
   		if(currentObject.oneHourAvg < currentObject.twoHourAvg) {
   			currentObject.symbol = '<h3 id="upArrow"></h3>';
   		} else if(currentObject.oneHourAvg > currentObject.twoHourAvg) {
