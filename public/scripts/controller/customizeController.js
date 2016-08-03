@@ -1,12 +1,13 @@
 
 (function(module){
 
-  	var customizeController = {  
+  	var customizeController = {
 	  	index: function() {
-	    	$('#customize').fadeIn(350).siblings().hide;
+        $('.tab-content').hide();
+	    	$('#customize').fadeIn(350);
 	  	}
 	};
-	
+
 	module.customizeController = customizeController;
 
 })(window);

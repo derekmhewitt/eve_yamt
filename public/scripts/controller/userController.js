@@ -1,13 +1,13 @@
 
 (function(module){
 
-  	var indexController = {
+  	var userController = {
 	  	index: function() {
         $('.tab-content').hide();
-	    	$('#home').fadeIn(350);
+	    	$('#user-page').fadeIn(350);
 	  	}
 	};
 
-	module.indexController = indexController;
+	module.userController = userController;
 
 })(window);

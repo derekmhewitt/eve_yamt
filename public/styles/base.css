@@ -1,0 +1,10 @@
+body {
+  background-color: gray;
+}
+
+.tab-content {
+  height: 200px;
+  width: 600px;
+  background-color: yellow;
+  margin-top: 50px;
+}
