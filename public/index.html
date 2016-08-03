@@ -50,8 +50,8 @@
       // The start method will wait until the DOM is loaded.
       ui.start('#firebaseui-auth-container', uiConfig);
     </script>
+    <!-- *****************Handlebars Templates ******************** -->
     <script id="index-template" type="text/x-handlebars-template">
-    <!-- *****************Handlebars Template ******************** -->
     <ul>
       <li>{{name}}</li>
       <li>{{buyAvg}}</li>
@@ -59,7 +59,7 @@
       <li>{{{symbol}}}</li>
     </ul>
     </script>
-    <script id="marketplace-template" type="text/x-handlebars-template">
+    <script id="dashboard-template" type="text/x-handlebars-template">
       <ul>
         <li>{{name}}</li>
         <li>{{avg}}</li>
@@ -145,6 +145,13 @@
     <script src="/scripts/model/dashboardModel.js"></script>
     <script src="/scripts/model/indexModel.js"></script>
     <script src="/scripts/model/singleSearchModel.js"></script>
+    <!-- View Scripts -->
+    <script src="/scripts/view/aboutEveOnlineView.js"></script>
+    <script src="/scripts/view/aboutUsView.js"></script>
+    <script src="/scripts/view/customizeView.js"></script>
+    <script src="/scripts/view/dashboardView.js"></script>
+    <script src="/scripts/view/indexView.js"></script>
+    <script src="/scripts/view/singleSearchView.js"></script>
     <!-- Controller Scripts -->
     <script src="/scripts/controller/indexController.js"></script>
     <script src="/scripts/controller/userController.js"></script>
@@ -154,12 +161,5 @@
     <script src="/scripts/controller/dashboardController.js"></script>
     <script src="/scripts/controller/singleSearchController.js"></script>
     <script src="/scripts/controller/routes.js"></script>
-    <!-- View Scripts -->
-    <script src="/scripts/view/aboutEveOnlineView.js"></script>
-    <script src="/scripts/view/aboutUsView.js"></script>
-    <script src="/scripts/view/customizeView.js"></script>
-    <script src="/scripts/view/dashboardView.js"></script>
-    <script src="/scripts/view/indexView.js"></script>
-    <script src="/scripts/view/singleSearchView.js"></script>
   </body>
 </html>
