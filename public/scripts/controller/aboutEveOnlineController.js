@@ -1,13 +1,13 @@
 
 (function(module){
 
-  var aboutEveController = {
+  var aboutEveOnlineController = {
     index: function() {
       $('.tab-content').hide();
       $('#about-eve').fadeIn(350);
     }
   };
 
-  module.aboutEveController = aboutEveController;
+  module.aboutEveOnlineController = aboutEveOnlineController;
 
 })(window);

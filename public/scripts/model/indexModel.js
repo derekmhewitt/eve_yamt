@@ -1,7 +1,7 @@
 
 (function(module) {
 
-	var indexData = {};
+	var indexModel = {};
 
 	var indexObjects = [];
 	var indexQuery = [{
@@ -21,7 +21,7 @@
   	"itemName": "Tritanium"
 	}];
 
-	indexData.displayDataObject = function() {
+	indexModel.displayDataObject = function() {
 		indexQuery.map(function(currentQuery) {
 			$.get('http://api.eve-central.com/api/marketstat/json?hours=1&typeid=' + currentQuery.idNum)
 			.done(function(oneHour) {
@@ -41,10 +41,9 @@
 		});
 	};
 
+	indexModel.displayDataObject();
 
-	indexData.displayDataObject();
-
-	module.indexData = indexData;
+	module.indexModel = indexModel;
 	module.indexObjects = indexObjects;
 
 })(window);

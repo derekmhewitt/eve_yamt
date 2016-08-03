@@ -3,7 +3,7 @@
 
   page('/', indexController.index);
   page('/user-page', userController.index);
-  page('/about-eve', aboutEveController.index);
+  page('/about-eve', aboutEveOnlineController.index);
   page('/about-us', aboutUsController.index);
   page('/single-search', singleSearchController.index);
   page('/customize', customizeController.index);
