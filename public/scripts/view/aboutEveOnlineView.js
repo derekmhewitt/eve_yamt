@@ -1,14 +1,14 @@
 
 (function(module){
 
-  	var aboutEveView = {};
+  	var aboutEveOnlineView = {};
   	var aboutEveCompiler = Handlebars.compile($('#aboutEve-template').text());
-  	
-  	aboutEveView.renderEve = function() {
+
+  	aboutEveOnlineView.renderEve = function() {
   		$('').empty.append();
   	};
-  
+
   	// aboutEveObj.request(aboutEveView,renderEve);
-  	module.aboutEveView = aboutEveView;
+  	module.aboutEveOnlineView = aboutEveOnlineView;
 
 })(window);
