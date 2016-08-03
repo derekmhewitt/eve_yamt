@@ -7,11 +7,11 @@
 
 	indexView.render = function(currentObject) {
 		if(currentObject.oneHourAvg < currentObject.twoHourAvg) {
-			currentObject.symbol = '<h3 id="upArrow"></h3>';
+			currentObject.symbol = '<i class="fa fa-arrow-up" aria-hidden="true"></i>';
 		} else if(currentObject.oneHourAvg > currentObject.twoHourAvg) {
-			currentObject.symbol = '<h3 id="downArrow"></h3>';
+			currentObject.symbol = '<i class="fa fa-arrow-down" aria-hidden="true"></i>';
 		} else {
-			currentObject.symbol = '<h3 id="exclamation-circle"></h3>';
+			currentObject.symbol = '<i class="fa fa-exclamation-circle" aria-hidden="true"></i>';
 		}
 		$('#home').append(indexContent(currentObject));
   };
@@ -19,3 +19,4 @@
   	module.indexView = indexView;
 
 })(window);
+// <h3 id="upArrow"></h3>
