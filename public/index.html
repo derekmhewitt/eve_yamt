@@ -78,27 +78,27 @@
     <link rel="stylesheet" href="/styles/modules.css"/>
   </head>
   <body>
-    <header></header>
-
-    <div id="firebaseui-auth-container"></div>
-
-    <main>
+    <header>
       <!-- Nav Bar -->
-      <header>
-        <nav class="main-nav">
-          <div class="icon-menu"></div>
-          <ul>
-            <li class="tab" data-content="home" id="home-navigation"><a href="/">Home</a></li>
-            <li class="tab" data-content="single-search" id="single-search-navigation"><a href="/single-search">Single Item Search</a></li>
-            <li class="tab" data-content="customize" id="customize-navigation"><a href="/user-page">User Dashboard</a></li>
-            <li class="tab" data-content="about" id="navigation"><a href="/about-us">About</a></li>
-            <li class="tab" data-content="about-eve" id="navigation"><a href="/about-eve">About EVE Online</a></li>
-          </ul>
-        </nav>
-      </header>
+      <nav class="main-nav">
+        <div class="icon-menu"></div>
+        <ul>
+          <li class="tab" data-content="home" id="home-navigation"><a href="/">Home</a></li>
+          <li class="tab" data-content="single-search" id="single-search-navigation"><a href="/single-search">Single Item Search</a></li>
+          <li class="tab" data-content="customize" id="customize-navigation"><a href="/user-page">User Dashboard</a></li>
+          <li class="tab" data-content="about" id="navigation"><a href="/about-us">About</a></li>
+          <li class="tab" data-content="about-eve" id="navigation"><a href="/about-eve">About EVE Online</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
       <!-- Content Sections -->
       <section id="home" class="tab-content">
         <h2>This is the home page with #home id!</h2>
+      </section>
+      <section id="login" class="tab-content">
+        <h2>This is the login section!</h2>
+        <div id="firebaseui-auth-container"></div>
       </section>
       <section id="single-search" class="search-content tab-content">
         <h2>This is the single search page that will show the results of a single item query at a time</h2>
@@ -145,6 +145,7 @@
     <script src="/scripts/model/dashboardModel.js"></script>
     <script src="/scripts/model/indexModel.js"></script>
     <script src="/scripts/model/singleSearchModel.js"></script>
+    <script src="/scritps/model/loginModel.js"></script>
     <!-- View Scripts -->
     <script src="/scripts/view/aboutEveOnlineView.js"></script>
     <script src="/scripts/view/aboutUsView.js"></script>
@@ -152,6 +153,7 @@
     <script src="/scripts/view/dashboardView.js"></script>
     <script src="/scripts/view/indexView.js"></script>
     <script src="/scripts/view/singleSearchView.js"></script>
+    <script src="/scripts/view/loginView.js"></script>
     <!-- Controller Scripts -->
     <script src="/scripts/controller/indexController.js"></script>
     <script src="/scripts/controller/userController.js"></script>
@@ -161,5 +163,6 @@
     <script src="/scripts/controller/dashboardController.js"></script>
     <script src="/scripts/controller/singleSearchController.js"></script>
     <script src="/scripts/controller/routes.js"></script>
+    <script src="/scripts/controller/loginController.js"></script>
   </body>
 </html>

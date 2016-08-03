@@ -8,6 +8,7 @@
   page('/single-search', singleSearchController.index);
   page('/customize', customizeController.index);
   page('/dashboard', dashboardController.index);
+  page('/login', loginController.index);
 
   page('#', indexController.index);
   page('*', indexController.index);
