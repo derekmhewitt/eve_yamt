@@ -8,9 +8,9 @@
 			"idNum": "34",
 			"itemName": "Tritanium"
 		};
-		$.get('http://api.eve-central.com/api/marketstat/json?hours=1&typeid=' + singleQuery.idNum)
+		$.get('https://api.eve-central.com/api/marketstat/json?hours=1&typeid=' + singleQuery.idNum)
 		.done(function(oneHour) {
-			$.get('http://api.eve-central.com/api/marketstat/json?hours=2&typeid=' + singleQuery.idNum)
+			$.get('https://api.eve-central.com/api/marketstat/json?hours=2&typeid=' + singleQuery.idNum)
 			.done(function(twoHour) {
 				var singleCurrentObject = {
 					name: singleQuery.itemName,
