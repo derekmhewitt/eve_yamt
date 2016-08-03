@@ -6,18 +6,28 @@
   customizeModel.searchQuery = null;
   customizeModel.queryResult = null;
   //needs to be a listener on this value
-  $('#customize-form').on('click', function(){
-    customizeModel.searchQuery = $('#customize-input').value;
+  $('#customize-button').on('click', function(event){
+    event.preventDefault();
+    customizeModel.searchQuery = $('#customize-input').val();
     customizeModel.findItem(customizeModel.searchQuery);
   });
 
   customizeModel.findItem = function(searchQuery) {
-    query = database.ref('/itemData/').orderByChild('itemName').equalTo(searchQuery).once('value').then(
+    console.log(searchQuery);
+    database.ref('/itemData/').orderByChild('itemName').equalTo(searchQuery).once('value').then(
       function(data) {
         console.log(data.val());
         customizeModel.queryResult = data.val();
       }
     );
+  };
+
+  customizeModel.validateItem = function() {
+    var temp = customizeModel.queryResult;
+    //pull itemId out and make a query to eve central with that id
+    //check if that id returns a valid market item
+    //if so, display results and show option to add to dashboard
+    //if not say invalid search, please try again
   };
   module.customizeModel = customizeModel;
 })(window);

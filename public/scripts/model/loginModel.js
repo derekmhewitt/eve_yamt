@@ -52,13 +52,5 @@
     }
   };
 
-  firebase.auth().onAuthStateChanged(function(user) {
-    if(user) {
-      loginView.loggedIn();
-    } else {
-      loginView.loggedOut();
-    }
-  });
-
   module.loginModel = loginModel;
 })(window);
