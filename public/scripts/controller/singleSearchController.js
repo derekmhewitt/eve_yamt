@@ -1,13 +1,12 @@
 
 (function(module){
 
-  	var singleSearchController = {};
+  	var singleController = {  
+	  	index: function() {
+	    	$('#single-search').fadeIn(350).siblings().hide;
+	  	}
+	};
   
-  	singleSearchController.controller = function() {
-    	$('.search-content').hide();
-    	$('#single-search').fadeIn(350);
-  	}
-  
-  	module.singleSearchController = singleSearchController;
+  	module.singleController = singleController;
 
 })(window);

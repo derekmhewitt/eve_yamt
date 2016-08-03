@@ -1,11 +1,10 @@
 
 (function(module){
 
-	var aboutEveController = {};
-	
-	aboutEveController.controller = function() {
-    	$('.tab-content').hide();
-    	$('#aboutEve').fadeIn(350);
+  	var aboutEveController = {  
+	  	index: function() {
+	    	$('#about-eve').fadeIn(350).siblings().hide;
+	  	}
 	};
 
 	module.aboutEveController = aboutEveController;

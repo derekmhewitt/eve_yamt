@@ -1,12 +1,11 @@
 
 (function(module){
 
-  	var customizeController = {};
-  
-  	customizeController.controller = function() {
-    	$('.search-content').hide();
-    	$('#customize-search').fadeIn(350);
-  	};
+  	var customizeController = {  
+	  	index: function() {
+	    	$('#customize').fadeIn(350).siblings().hide;
+	  	}
+	};
 	
 	module.customizeController = customizeController;
 
