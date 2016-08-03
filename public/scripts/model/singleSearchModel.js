@@ -27,7 +27,6 @@
 					sellAvg: oneHour[0].sell.avg.toFixed(2),
 					sellMin: oneHour[0].sell.min.toFixed(2)
 				};
-				console.log(singleCurrentObject);
 				singleSearchView.render(singleCurrentObject);
 			});
 		});
