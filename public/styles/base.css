@@ -1,17 +1,6 @@
-@font-face {
-  font-family: evesansneue-bold;
-  src: url("vendor/fonts/evesansneue-bold.otf")format("opentype");
-}
-@font-face {
-  font-family:evesansneue-italic;
-  src: url("vendor/fonts/evesansneue-italic.otf")format("opentype");
-}
-@font-face {
-  font-family: evesansneue-regular;
-  src: url("vendor/fonts/evesansneue-regular.otf")format("opentype");
-}
+
 body {
-  font-family: evesansneue-bold;
+  font-family: 'eve_sans_neuebold';
   background-color: gray;
   color: #9CA5A5;
 }
