@@ -66,6 +66,7 @@
         <li>{{max}}</li>
         <li>{{min}}</li>
       </ul>
+    </script>
     <script id="customize-template" type="text/x-handlebars-template">
     </script>
     <script id="single-search-template" type="text/x-handlebars-template">
@@ -143,6 +144,8 @@
           <input id="single" required>
           <button id="single-button">Search</button>
         </form>
+        <div id="single-search-append">
+        </div>
       </section>
       <section id="user-page" class="tab-content">
         <h2>This is user page where customize and dashboard live</h2>
@@ -157,10 +160,17 @@
             <input id="customize-input" placeholder="Search For An Item Here"></input>
             <button id="customize-button">Search</button>
           </form>
+          <form>
+          <div id="customize-append">
+          </div>
+            <button id="customize-add-dashboard">Add to Dashboard</button>
+          <form>
         </section>
         <section id="dashboard" class="search-content">
-          <h2>This is the dashboard the user will see while they're logged in that will show their customized veiw.  Woo!</h2>
+          <h2>Dashboard! Woo!</h2>
           <p>Hi user!  Welcome to your dashboard.  Some words here about how you'll customize this page</p>
+          <div id="dashboard-append">
+          </div>
         </section>
       </section>
       <section id="about-eve" class="tab-content">
@@ -196,7 +206,7 @@
           </a>
         </div>
         <div class="outer" id="forthOne">
-          <a href="https://github.com/">
+          <a href="https://github.com/loganlsr">
             <span class="picture" id="logan"></span>
             <span id="logan_text">
               <p>Logan Logan Logan Logan Logan Logan Logan Logan Logan</p>
