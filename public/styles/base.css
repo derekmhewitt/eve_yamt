@@ -5,10 +5,13 @@ body {
   color: #9CA5A5;
 }
 
+main {
+  background-color: #253139;
+}
+
 .tab-content {
   height: 300px;
   width: 600px;
-  background-color: #253139;
   margin-top: 50px;
 }
 

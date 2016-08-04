@@ -100,7 +100,7 @@
     </script>
     <link rel="stylesheet" href="/vendor/styles/firebaseLogin.css"/>
     <link rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/live/0.4/firebase-ui-auth.css"/>
-    <link rel="stylesheet" href="vendor/fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendor/fonts/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="/vendor/styles/reset.css"/>
     <link rel="stylesheet" href="/vendor/fonts/eve-fonts/stylesheet.css"/>
     <link rel="stylesheet" href="/styles/base.css"/>
@@ -109,6 +109,8 @@
   </head>
   <body>
     <header>
+    </header>
+    <main>
       <!-- Nav Bar -->
       <nav class="main-nav">
         <div class="icon-menu"></div>
@@ -121,26 +123,24 @@
           <li class="tab" data-content ="login" id="login-navigation"><a href="/login">Login</a></li>
         </ul>
       </nav>
-    </header>
-    <main>
       <!-- Content Sections -->
       <section id="home" class="tab-content">
         <h2>This is the home page with #home id!</h2>
       </section>
       <section id="login" class="tab-content">
-        <h2>This is the login section!</h2>
+        <!-- <h2>This is the login section!</h2> -->
         <div id="firebaseui-auth-container"></div>
         <div id="signed-in"><button id="sign-out">Sign Out</button></div>
         <form id="new-account">
-          <input id="new-account-user-email" placeholder="your@emailhere.com" type="email"></input>
-          <input id="new-account-user-password" placeholder="ACleverPassword" type="password"></input>
-          <button id="new-account-form-submit">Register New Account</input>
+          <input id="new-account-user-email" placeholder="your@emailhere.com" type="email" required>
+          <input id="new-account-user-password" placeholder="ACleverPassword" type="password" required>
+          <button id="new-account-form-submit">Register New Account</button>
         </form>
       </section>
       <section id="single-search" class="search-content tab-content">
         <h2>This is the single search page that will show the results of a single item query at a time</h2>
         <form>
-          <input id="single"></input>
+          <input id="single" required>
           <button id="single-button">Search</button>
         </form>
       </section>

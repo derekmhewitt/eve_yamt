@@ -465,9 +465,11 @@
   content: "\f061";
 }
 .fa-arrow-up:before {
+  color: #16ff16;
   content: "\f062";
 }
 .fa-arrow-down:before {
+  color: #ff1616;
   content: "\f063";
 }
 .fa-mail-forward:before,
@@ -490,6 +492,7 @@
   content: "\f069";
 }
 .fa-exclamation-circle:before {
+  color: #ff1616;
   content: "\f06a";
 }
 .fa-gift:before {
