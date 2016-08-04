@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/derekmhewitt/EVE_YAMT.png?label=ready&title=Ready)](https://waffle.io/derekmhewitt/EVE_YAMT)
 # EVE_YAMT
 EVE Online: Yet Another Market Tool
 
