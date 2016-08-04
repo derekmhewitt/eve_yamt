@@ -1,5 +1,5 @@
 .index-template {
-display:inline-block;;
+  display:inline-block;
 }
 
 .outer {
@@ -16,40 +16,41 @@ display:inline-block;;
   background-size: 400px 400px;
 }
 .icon-menu {
-  font-size: 5em;
-  margin-left: 391px;
-
+  display: block;
+  /*font-size: 5em;*/
+  /*margin-left: 391px;*/
 }
 .main-nav ul {
   display: none;
-  padding: 0;
-  list-style: none;
-  clear: both;
+  /*list-style: none;*/
+  /*clear: both;*/
 }
-.main-nav:hover ul {
+/*.main-nav:hover ul {
   display: block;
-}
+}*/
 .main-nav li {
   margin-right: .4em;
   padding: .5em .2em;
-  text-decoration: none;
+  /*text-decoration: none;*/
 }
-.main-nav:hover ul li {
+/*.main-nav:hover ul li {
   display:block;
   margin-left: 391px;
-}
+}*/
+
 #indexTable  {
-    margin-top:30px;
-    margin-bottom: 30px;
-    border-style: dotted;
-    border-width: medium;
-    border-color: rgb(213,0,0);
+  margin-top:30px;
+  margin-bottom: 30px;
+  border-style: dotted;
+  border-width: medium;
+  border-color: rgb(213,0,0);
 }
 
 #home ul li{
   display:inline;
 }
-#firstOne {
+
+/*#firstOne {
   float: right;
 }
 
@@ -89,19 +90,25 @@ display:inline-block;;
 #logan {
   float:right;
   background-image: url('http://www.stevensegallery.com/g/270/290');
-}
+}*/
 @media only screen and (min-width: 640px) {
 
-  .main-nav ul li {
-    display: inline-block;
-  }
   .main-nav ul {
     display: block;
   }
 
   .main-nav ul li {
     display: inline;
-    border-bottom: none;
-    text-decoration: none;
+    /*border-bottom: none;
+    text-decoration: none;*/
   }
+  /*.main-nav:hover ul {
+    display: block;
+  }
+
+  .main-nav:hover ul li {
+    display: inline;
+    color: #253139;
+    background-color: #9CA5A5;
+  }*/
 }
