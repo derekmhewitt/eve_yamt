@@ -68,6 +68,12 @@
       </ul>
     </script>
     <script id="customize-template" type="text/x-handlebars-template">
+      <ul>
+        <li>Name: {{name}}</li>
+        <li>Average: {{avg}}</li>
+        <li>Max: {{max}}</li>
+        <li>Min: {{min}}</li>
+      </ul>
     </script>
     <script id="single-search-template" type="text/x-handlebars-template">
       <ul>
@@ -163,8 +169,8 @@
           <form>
           <div id="customize-append">
           </div>
-            <button id="customize-add-dashboard">Add to Dashboard</button>
-          <form>
+          <button class="hidden" id="customize-add-dashboard">Add to Dashboard</button>
+          </form>
         </section>
         <section id="dashboard" class="search-content">
           <h2>Dashboard! Woo!</h2>
