@@ -17,8 +17,16 @@ body {
 }
 
 .tab-content {
-  height: 200px;
+  height: 300px;
   width: 600px;
   background-color: #253139;
   margin-top: 50px;
+}
+
+.hidden {
+  display: none;
+}
+
+.clearfix {
+  clear: both;
 }

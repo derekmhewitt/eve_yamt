@@ -9,8 +9,10 @@
 
   firebase.auth().onAuthStateChanged(function(user) {
     if(user) {
+      $('#customize-navigation').show();
       loginView.loggedIn();
     } else {
+      $('#customize-navigation').hide();
       loginView.loggedOut();
     }
   });
