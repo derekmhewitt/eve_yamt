@@ -2,13 +2,14 @@
 (function(module) {
 
   var dashboardView = {};
-  var dashboardCompiler = Handlebars.compile($('#dashboard-template').text());
+  var dashboardViewTemplateSource = $('#dashboard-template').html();
+  var dashboardViewTemplate = Handlebars.compile(dashboardViewTemplateSource);
 
-  dashboardView.emptyDashboard = function() {
-    $('#user-page-append').empty();
+  dashboardView.renderDashboard = function(data) {
+    console.log(data);
+    $('#dashboard-append').empty();
+    $('#dashboard-append').append(dashboardViewTemplate(data));
   };
 
-  // dashboardObj.requestInfo(dashboardView,renderDashboard);
   module.dashboardView = dashboardView;
-
 })(window);
