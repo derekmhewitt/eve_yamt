@@ -30,7 +30,8 @@
       //   console.log(temp);
       //   zebraArray.push(current);
       // });
-      dashboardView.renderDashboard(zebraArray);
+      console.log('this is zebra array', zebraArray);
+      dashboardModel.processData(zebraArray);
     });
   };
 

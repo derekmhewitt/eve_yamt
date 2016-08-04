@@ -7,10 +7,9 @@
 
   dashboardView.renderDashboard = function(data) {
     console.log('dashboardView.renderDashboard', data);
-    $('#dashboard-append').empty();
-    data.forEach(function(current){
-      $('#dashboard-append').append(dashboardViewTemplate(current));
-    });
+    // data.forEach(function(current) {
+    $('#dashboard-append').append(dashboardViewTemplate(data));
+    // });
   };
 
   module.dashboardView = dashboardView;
