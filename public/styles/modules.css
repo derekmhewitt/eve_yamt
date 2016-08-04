@@ -4,11 +4,14 @@
   clear: both;
 }
 
-/*.fa {
-  width: 100%;
+.main-nav a {
+  display: none;
+}
+
+.main-nav div {
   text-align: right;
-  font-size: 2em;
-}*/
+  width: 100%;
+}
 
 .main-nav:hover .fa-bars ul {
   display: block;

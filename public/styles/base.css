@@ -12,12 +12,6 @@ main {
   background-color: #253139;
 }
 
-/*nav {
-  font-size: 1.5em;
-  text-align: right;
-  padding: 10px;
-}*/
-
 ul {
   list-style: none;
 }
@@ -36,11 +30,6 @@ a {
   color: #253139;
   font-family: 'eve_sans_neuebold';
 }
-
-/*.tab {
-  width: 100%;
-  background-color: #9CA5A5;
-}*/
 
 #navigation {
   font-size: 18px;
