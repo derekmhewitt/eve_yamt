@@ -29,11 +29,12 @@
     //pull itemId out and make a query to eve central with that id
     $.get('https://api.eve-central.com/api/marketstat/json?hours=1&typeid=' + temp).done(function(data) {
       console.log(data);
-      // if(/*query is valid*/) {
-      //   //do some stuff
-      // } else {
-      //   //display a message that your search result is a valid item, but unfortunately it's not for sale in EVE Online
-      // }
+      console.log(data[0].all.avg);
+      if(data[0].all.avg > 0) {
+        //display item to user using handlebars and present button to add item to their dashboard
+      } else {
+        //display a message that your search result is a valid item, but unfortunately it's not for sale in EVE Online
+      }
     });
     //check if that id returns a valid market item
     //if so, display results and show option to add to dashboard
