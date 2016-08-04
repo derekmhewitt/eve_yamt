@@ -4,9 +4,22 @@
   clear: both;
 }
 
-.fa-bars {
-  display: block;
+/*.fa {
+  width: 100%;
   text-align: right;
+  font-size: 2em;
+}*/
+
+.main-nav:hover .fa-bars ul {
+  display: block;
+  width: 100%;
+  background-color: #9CA5A5;
+  font-size: 1.5em;
+}
+
+.main-nav:hover .fa-bars a {
+  display: block;
+  text-align: center;
 }
 
 .index-template {
@@ -25,19 +38,6 @@
   height: 200px;
   margin-bottom: 15px;
   background-size: 400px 400px;
-}
-
-/*.icon-menu {
-  display: block;
-}*/
-
-.main-nav ul {
-  width: 100%;
-}
-
-.main-nav a {
-  display: block;
-  text-align: center;
 }
 
 #indexTable  {
