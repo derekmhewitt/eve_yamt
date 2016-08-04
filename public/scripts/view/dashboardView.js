@@ -6,9 +6,11 @@
   var dashboardViewTemplate = Handlebars.compile(dashboardViewTemplateSource);
 
   dashboardView.renderDashboard = function(data) {
-    console.log(data);
+    console.log('dashboardView.renderDashboard', data);
     $('#dashboard-append').empty();
-    $('#dashboard-append').append(dashboardViewTemplate(data));
+    data.forEach(function(current){
+      $('#dashboard-append').append(dashboardViewTemplate(current));
+    });
   };
 
   module.dashboardView = dashboardView;
