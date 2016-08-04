@@ -1,6 +1,5 @@
 .index-template {
 display:inline-block;;
-
 }
 
 .outer {
@@ -16,6 +15,7 @@ display:inline-block;;
   margin-bottom: 15px;
   background-size: 400px 400px;
 }
+
 #home ul li{
   display:inline;
 }
@@ -59,4 +59,10 @@ display:inline-block;;
 #logan {
   float:right;
   background-image: url('http://www.stevensegallery.com/g/270/290');
+}
+@media screen and (min-width: 640px) {
+
+  .main-nav ul li {
+    display: inline-block;
+  }
 }
