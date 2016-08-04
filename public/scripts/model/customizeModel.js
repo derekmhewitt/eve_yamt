@@ -6,11 +6,49 @@
   customizeModel.searchQuery = null;
   customizeModel.queryResult = null;
   //needs to be a listener on this value
+
   $('#customize-button').on('click', function(event){
     event.preventDefault();
     customizeModel.searchQuery = $('#customize-input').val();
     customizeModel.findItem(customizeModel.searchQuery);
   });
+
+  $('#customize-add-dashboard').on.('click', function() {
+    //grab item id of current search item
+
+    //push that id into user/userdata/dashboard items array
+/*
+    function writeNewPost(uid, username, picture, title, body) {
+  // A post entry.
+  var postData = {
+    author: username,
+    uid: uid,
+    body: body,
+    title: title,
+    starCount: 0,
+    authorPic: picture
+  };
+
+  // Get a key for a new Post.
+  var newPostKey = firebase.database().ref().child('posts').push().key;
+
+  // Write the new post's data simultaneously in the posts list and the user's post list.
+  var updates = {};
+  updates['/posts/' + newPostKey] = postData;
+  updates['/user-posts/' + uid + '/' + newPostKey] = postData;
+
+  return firebase.database().ref().update(updates);
+}
+*/
+  })
+
+  customizeModel.writeDataToFirebase = function(idNum, itemName) {
+    var itemData = {
+      itemName: itemName,
+      idNum: idNum
+    };
+    firebase.database().push();
+  }
 
   customizeModel.findItem = function(searchQuery) {
     console.log(searchQuery);
@@ -24,18 +62,17 @@
   };
 
   customizeModel.validateItem = function() {
-    var temp = customizeModel.queryResult[Object.keys(customizeModel.queryResult)[0]].idNum;
-    var temp2 = customizeModel.queryResult[Object.keys(customizeModel.queryResult)[0]].itemName;
-
-    console.log(temp);
+    customizeModel.currentQueryId = customizeModel.queryResult[Object.keys(customizeModel.queryResult)[0]].idNum;
+    customizeModel.currentQueryName = customizeModel.queryResult[Object.keys(customizeModel.queryResult)[0]].itemName;
+    console.log(customizeModel.currentQueryId);
     //pull itemId out and make a query to eve central with that id
-    $.get('https://api.eve-central.com/api/marketstat/json?hours=1&typeid=' + temp).done(function(data) {
+    $.get('https://api.eve-central.com/api/marketstat/json?hours=1&typeid=' + customizeModel.currentQueryId).done(function(data) {
       console.log(data);
       console.log(data[0].all.avg);
       if(data[0].all.avg > 0) {
         var currentCustomizeObject = {
-          name: temp2,
-          id: temp,
+          name: customizeModel.currentQueryName,
+          id: customizeModel.currentQueryId,
           min: data[0].all.min.toFixed(2),
           max: data[0].all.max.toFixed(2),
           avg: data[0].all.avg.toFixed(2)
