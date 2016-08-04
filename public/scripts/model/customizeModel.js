@@ -13,42 +13,21 @@
     customizeModel.findItem(customizeModel.searchQuery);
   });
 
-  $('#customize-add-dashboard').on.('click', function() {
-    //grab item id of current search item
+  $('#customize-add-dashboard').on('click', function(event) {
+    event.preventDefault();
+    customizeModel.writeDataToFirebase();
+  });
 
-    //push that id into user/userdata/dashboard items array
-/*
-    function writeNewPost(uid, username, picture, title, body) {
-  // A post entry.
-  var postData = {
-    author: username,
-    uid: uid,
-    body: body,
-    title: title,
-    starCount: 0,
-    authorPic: picture
-  };
-
-  // Get a key for a new Post.
-  var newPostKey = firebase.database().ref().child('posts').push().key;
-
-  // Write the new post's data simultaneously in the posts list and the user's post list.
-  var updates = {};
-  updates['/posts/' + newPostKey] = postData;
-  updates['/user-posts/' + uid + '/' + newPostKey] = postData;
-
-  return firebase.database().ref().update(updates);
-}
-*/
-  })
-
-  customizeModel.writeDataToFirebase = function(idNum, itemName) {
+  customizeModel.writeDataToFirebase = function() {
     var itemData = {
-      itemName: itemName,
-      idNum: idNum
+      "idNum": customizeModel.currentQueryId,
+      "itemName": customizeModel.currentQueryName
     };
-    firebase.database().push();
-  }
+    var user = firebase.auth().currentUser;
+    var myRef = firebase.database().ref('/users/' + user.uid);
+    console.log(itemData);
+    myRef.child('dashboard').push(itemData);
+  };
 
   customizeModel.findItem = function(searchQuery) {
     console.log(searchQuery);
