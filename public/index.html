@@ -83,25 +83,25 @@
         <li>
           <h4>All:</h4>
           <ul id="all-prices" class="prices-list">
-            <li>Max {{allMax}}</li>
-            <li>Avg {{allAvg}}</li>
-            <li>Min {{allMin}}</li>
+            <li>Max: {{allMax}}</li>
+            <li>Avg: {{allAvg}}</li>
+            <li>Min: {{allMin}}</li>
           </ul>
         </li>
         <li>
           <h4>Buy:</h4>
           <ul id="buy-prices" class="prices-list">
-            <li>Max {{buyMax}}</li>
-            <li>Avg {{buyAvg}}</li>
-            <li>Min {{buyMin}}</li>
+            <li>Max: {{buyMax}}</li>
+            <li>Avg: {{buyAvg}}</li>
+            <li>Min: {{buyMin}}</li>
           </ul>
         </li>
         <li>
           <h4>Sell:</h4>
           <ul id="sell-prices" class="prices-list">
-            <li>Max {{sellMax}}</li>
-            <li>Avg {{sellAvg}}</li>
-            <li>Min {{sellMin}}</li>
+            <li>Max: {{sellMax}}</li>
+            <li>Avg: {{sellAvg}}</li>
+            <li>Min: {{sellMin}}</li>
           </ul>
         </li>
       </ul>
@@ -131,23 +131,55 @@
             <li class="tab" data-content ="login" id="login-navigation"><a href="/login">Login</a></li>
           </ul>
         </nav>
-        <section id="customize" class="search-content">
-          <form id="customize-form">
-            <input id="customize-input" placeholder="Search For An Item Here"></input>
-            <button id="customize-button">Search</button>
-          </form>
-          <form>
-          <div id="customize-append">
-          </div>
-          <button class="hidden" id="customize-add-dashboard">Add to Dashboard</button>
-          </form>
-        </section>
-        <section id="dashboard" class="search-content">
-          <h2>Dashboard! Woo!</h2>
-          <p>Hi user!  Welcome to your dashboard.  Some words here about how you'll customize this page</p>
-          <div id="dashboard-append">
-          </div>
-        </section>
+
+         <!-- Content Sections -->
+     <section id="home" class="tab-content">
+       <h2></h2>
+     </section>
+     <section id="login" class="tab-content">
+     <!-- <h2>This is the login section!</h2> -->
+       <div id="firebaseui-auth-container"></div>
+       <div id="signed-in"><button id="sign-out">Sign Out</button></div>
+       <form id="new-account">
+         <input id="new-account-user-email" placeholder="your@emailhere.com" type="email" required>
+         <input id="new-account-user-password" placeholder="ACleverPassword" type="password" required>
+         <button id="new-account-form-submit">Register New Account</button>
+       </form>
+     </section>
+     <section id="single-search" class="search-content tab-content">
+       <h2>This is the single search page that will show the results of a single item query at a time</h2>
+       <form>
+         <input id="single" required>
+         <button id="single-button">Search</button>
+       </form>
+       <div id="single-search-append">
+       </div>
+     </section>
+    <section id="user-page" class="tab-content">
+       <h2>This is user page where customize and dashboard live</h2>
+       <nav>
+         <ul>
+           <li class="search-tab" data-content="customize" id="search-navigation"><a href="/customize">Customize</a></li>
+           <li class="search-tab" data-content="dashboard" id="search-navigation"><a href="/dashboard">Dashboard</a></li>
+         </ul>
+       </nav>
+      <section id="customize" class="search-content">
+        <form id="customize-form">
+          <input id="customize-input" placeholder="Search For An Item Here"></input>
+          <button id="customize-button">Search</button>
+        </form>
+        <form>
+        <div id="customize-append">
+        </div>
+        <button class="hidden" id="customize-add-dashboard">Add to Dashboard</button>
+        </form>
+      </section>
+      <section id="dashboard" class="search-content">
+        <h2>Dashboard! Woo!</h2>
+        <p>Hi user!  Welcome to your dashboard.  Some words here about how you'll customize this page</p>
+        <div id="dashboard-append">
+        </div>
+      </section>
       </section>
       <section id="about-eve" class="tab-content">
         <h2>About EVE will go here...</h2>
