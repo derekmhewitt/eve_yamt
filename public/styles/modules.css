@@ -2,6 +2,61 @@
 display:inline-block;;
 
 }
+
+.outer {
+  width: 400px;
+  margin: 30px;
+  border: 5px solid #111b35;
+  border-radius: 5px;
+}
+
+.picture {
+  width: 400px;
+  height: 200px;
+  margin-bottom: 15px;
+  background-size: 400px 400px;
+}
 #home ul li{
   display:inline;
+}
+#firstOne {
+  float: right;
+}
+
+#elizabeth {
+  float:right;
+  background-image: url('http://www.stevensegallery.com/g/350/270');
+}
+
+#secondOne {
+  float: right;
+}
+
+#aziza {
+  float:right;
+  background-image: url('http://www.stevensegallery.com/290/300');
+}
+
+#aziza:hover {
+  background-image: url('');
+}
+
+#thirdOne {
+  float:right;
+}
+
+#derek {
+  float:right;
+  background-image: url('http://www.stevensegallery.com/g/350/250');
+}
+
+#derek:hover {
+  background-image: url('');
+}
+#forthOne {
+  float:right;
+}
+#logan {
+  float:right;
+  background-image: url('http://www.stevensegallery.com/g/270/290');
 }
