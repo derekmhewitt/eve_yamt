@@ -1,4 +1,8 @@
 
+.highlight {
+  color: #8DDFEE;
+}
+
 @media only screen and (min-width: 640px) {
   body{
     width: 80%;

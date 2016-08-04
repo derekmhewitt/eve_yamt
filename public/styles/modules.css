@@ -22,7 +22,11 @@
 
 .main-nav:hover .fa-bars a {
   display: block;
+  padding: .25em 0;
   text-align: center;
+}
+.main-nav:hover .fa-bars a:hover {
+  background-color: #8DDFEE;
 }
 
 .index-template {
