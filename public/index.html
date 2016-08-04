@@ -106,10 +106,10 @@
         </li>
       </ul>
     </script>
+    <link rel="stylesheet" href="/vendor/styles/reset.css"/>
     <link rel="stylesheet" href="/vendor/styles/firebaseLogin.css"/>
     <link rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/live/0.4/firebase-ui-auth.css"/>
     <link rel="stylesheet" href="vendor/fonts/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="/vendor/styles/reset.css"/>
     <link rel="stylesheet" href="/vendor/fonts/eve-fonts/stylesheet.css"/>
     <link rel="stylesheet" href="/styles/base.css"/>
     <link rel="stylesheet" href="/styles/layout.css"/>
@@ -121,45 +121,14 @@
     <main>
       <!-- Nav Bar -->
       <nav class="main-nav">
-        <div class="icon-menu"><i class="fa fa-bars" aria-hidden="true" ></i></div>
-        <ul>
-          <li class="tab" data-content="home" id="home-navigation"><a href="/">Home</a></li>
-          <li class="tab" data-content="single-search" id="single-search-navigation"><a href="/single-search">Single Item Search</a></li>
-          <li class="tab hidden" data-content="customize" id="customize-navigation"><a href="/user-page">User Dashboard</a></li>
-          <li class="tab" data-content="about" id="about-us-navigation"><a href="/about-us">About</a></li>
-          <li class="tab" data-content="about-eve" id="about-eve-navigation"><a href="/about-eve">About EVE Online</a></li>
-          <li class="tab" data-content ="login" id="login-navigation"><a href="/login">Login</a></li>
-        </ul>
-      </nav>
-      <!-- Content Sections -->
-      <section id="home" class="tab-content">
-        <h2></h2>
-      </section>
-      <section id="login" class="tab-content">
-        <!-- <h2>This is the login section!</h2> -->
-        <div id="firebaseui-auth-container"></div>
-        <div id="signed-in"><button id="sign-out">Sign Out</button></div>
-        <form id="new-account">
-          <input id="new-account-user-email" placeholder="your@emailhere.com" type="email" required>
-          <input id="new-account-user-password" placeholder="ACleverPassword" type="password" required>
-          <button id="new-account-form-submit">Register New Account</button>
-        </form>
-      </section>
-      <section id="single-search" class="search-content tab-content">
-        <h2>This is the single search page that will show the results of a single item query at a time</h2>
-        <form>
-          <input id="single" required>
-          <button id="single-button">Search</button>
-        </form>
-        <div id="single-search-append">
-        </div>
-      </section>
-      <section id="user-page" class="tab-content">
-        <h2>This is user page where customize and dashboard live</h2>
-        <nav>
+        <div class="fa-bars:before"></div>
           <ul>
-            <li class="search-tab" data-content="customize" id="search-navigation"><a href="/customize">Customize</a></li>
-            <li class="search-tab" data-content="dashboard" id="search-navigation"><a href="/dashboard">Dashboard</a></li>
+            <li class="tab" data-content="home" id="home-navigation"><a href="/">Home</a></li>
+            <li class="tab" data-content="single-search" id="single-search-navigation"><a href="/single-search">Single Item Search</a></li>
+            <li class="tab hidden" data-content="customize" id="customize-navigation"><a href="/user-page">User Dashboard</a></li>
+            <li class="tab" data-content="about" id="about-us-navigation"><a href="/about-us">About</a></li>
+            <li class="tab" data-content="about-eve" id="about-eve-navigation"><a href="/about-eve">About EVE Online</a></li>
+            <li class="tab" data-content ="login" id="login-navigation"><a href="/login">Login</a></li>
           </ul>
         </nav>
         <section id="customize" class="search-content">

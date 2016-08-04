@@ -1,33 +1,56 @@
 
 body {
+  min-width: 350px;
   font-family: 'eve_sans_neuebold';
-  background-color: gray;
+  background-image: url('../vendor/images/planet_view_phone.jpg');
+  background-size: 100%;
   color: #9CA5A5;
 }
 
 main {
   background-color: #253139;
 }
+
 nav {
-  width:auto;
-  margin-bottom: 30px;
-  color:white;
-  font-size: 18px;
+  /*width:auto;*/
+  /*margin-bottom: 30px;*/
+  /*color:white;*/
+  font-size: 1.5em;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background-color: #9CA5A5;
+  padding: .5em 1em;
+  font-family: 'eve_sans_neuebold';
+  font-size: 1em;
+  color: #253139;
+}
+
+a {
+  text-decoration: none;
+  color: #253139;
+  background-color: #9CA5A5;
+
 }
 .main-nav {
-  color:white;
+  /*display: none;*/
 }
 .tab {
   margin:20px;
-  display:table-cell;
-  padding:auto;
+  /*display:table-cell;*/
+  /*padding:auto;*/
 }
 #navigation {
   font-size: 18px;
 }
 .tab-content {
-  height: 300px;
-  width: 600px;
+  /*height: 300px;*/
+  /*width: 600px;*/
   margin-top: 50px;
 }
 .clearfix {
