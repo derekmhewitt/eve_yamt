@@ -1,6 +1,7 @@
 
 body {
   min-width: 350px;
+  max-width: 960px;
   font-family: 'eve_sans_neuebold';
   background-image: url('../vendor/images/planet_view_phone.jpg');
   background-size: 100%;
@@ -11,9 +12,11 @@ main {
   background-color: #253139;
 }
 
-nav {
+/*nav {
   font-size: 1.5em;
-}
+  text-align: right;
+  padding: 10px;
+}*/
 
 ul {
   list-style: none;
@@ -34,10 +37,10 @@ a {
   font-family: 'eve_sans_neuebold';
 }
 
-.tab {
+/*.tab {
   width: 100%;
   background-color: #9CA5A5;
-}
+}*/
 
 #navigation {
   font-size: 18px;
