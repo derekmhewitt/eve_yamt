@@ -7,11 +7,11 @@
 
 	singleSearchView.render = function(currentObject) {
 		if(currentObject.oneHourAvg < currentObject.twoHourAvg) {
-			currentObject.symbol = '<h3 id="upArrow"></h3>';
+			currentObject.symbol = '<i class="fa-arrow-up:before" aria-hidden="true"></i>';
 		} else if(currentObject.oneHourAvg > currentObject.twoHourAvg) {
-			currentObject.symbol = '<h3 id="downArrow"></h3>';
+			currentObject.symbol = '<i class="fa-arrow-down:before" aria-hidden="true"></i>';
 		} else {
-			currentObject.symbol = '<h3 id="exclamation-circle"></h3>';
+			currentObject.symbol = '<i class="fa-exclamation-circle:before" aria-hidden="true"></i>';
 		}
 		$('#single-search').append(singleSearchContent(currentObject));
   };

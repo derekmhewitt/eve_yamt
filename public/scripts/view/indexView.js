@@ -19,4 +19,3 @@
   	module.indexView = indexView;
 
 })(window);
-// <h3 id="upArrow"></h3>
