@@ -16,8 +16,9 @@ display:inline-block;;
   background-size: 400px 400px;
 }
 .icon-menu {
-  font-size: 3em;
-  float: right;
+  font-size: 5em;
+  margin-left: 391px;
+
 }
 .main-nav ul {
   display: none;
@@ -32,6 +33,17 @@ display:inline-block;;
   margin-right: .4em;
   padding: .5em .2em;
   text-decoration: none;
+}
+.main-nav:hover ul li {
+  display:block;
+  margin-left: 391px;
+}
+#indexTable  {
+    margin-top:30px;
+    margin-bottom: 30px;
+    border-style: dotted;
+    border-width: medium;
+    border-color: rgb(213,0,0);
 }
 
 #home ul li{
@@ -78,7 +90,7 @@ display:inline-block;;
   float:right;
   background-image: url('http://www.stevensegallery.com/g/270/290');
 }
-@media only screen and (min-width: 740px) {
+@media only screen and (min-width: 640px) {
 
   .main-nav ul li {
     display: inline-block;

@@ -30,11 +30,6 @@ nav {
   width: 600px;
   margin-top: 50px;
 }
-
-.hidden {
-  display: none;
-}
-
 .clearfix {
   clear: both;
 }
