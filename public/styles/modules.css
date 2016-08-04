@@ -1,3 +1,14 @@
+.main-nav ul {
+  display: none;
+  padding: 0;
+  clear: both;
+}
+
+.fa-bars {
+  display: block;
+  text-align: right;
+}
+
 .index-template {
   display:inline-block;
 }
@@ -15,28 +26,19 @@
   margin-bottom: 15px;
   background-size: 400px 400px;
 }
-.icon-menu {
+
+/*.icon-menu {
   display: block;
-  /*font-size: 5em;*/
-  /*margin-left: 391px;*/
-}
+}*/
+
 .main-nav ul {
-  display: none;
-  /*list-style: none;*/
-  /*clear: both;*/
+  width: 100%;
 }
-/*.main-nav:hover ul {
+
+.main-nav a {
   display: block;
-}*/
-.main-nav li {
-  margin-right: .4em;
-  padding: .5em .2em;
-  /*text-decoration: none;*/
+  text-align: center;
 }
-/*.main-nav:hover ul li {
-  display:block;
-  margin-left: 391px;
-}*/
 
 #indexTable  {
   margin-top:30px;
@@ -50,65 +52,10 @@
   display:inline;
 }
 
-/*#firstOne {
-  float: right;
-}
-
-#elizabeth {
-  float:right;
-  background-image: url('http://www.stevensegallery.com/g/350/270');
-}
-
-#secondOne {
-  float: right;
-}
-
-#aziza {
-  float:right;
-  background-image: url('http://www.stevensegallery.com/290/300');
-}
-
-#aziza:hover {
-  background-image: url('');
-}
-
-#thirdOne {
-  float:right;
-}
-
-#derek {
-  float:right;
-  background-image: url('http://www.stevensegallery.com/g/350/250');
-}
-
-#derek:hover {
-  background-image: url('');
-}
-#forthOne {
-  float:right;
-}
-#logan {
-  float:right;
-  background-image: url('http://www.stevensegallery.com/g/270/290');
-}*/
 @media only screen and (min-width: 640px) {
 
   .main-nav ul {
     display: block;
   }
 
-  .main-nav ul li {
-    display: inline;
-    /*border-bottom: none;
-    text-decoration: none;*/
-  }
-  /*.main-nav:hover ul {
-    display: block;
-  }
-
-  .main-nav:hover ul li {
-    display: inline;
-    color: #253139;
-    background-color: #9CA5A5;
-  }*/
 }

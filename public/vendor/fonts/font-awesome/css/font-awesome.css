@@ -737,7 +737,8 @@
 .fa-reorder:before,
 .fa-bars:before {
   content: "\f0c9";
-  color:#7295A1;
+  font-size: 2em;
+  color:#9CA5A5;
 }
 .fa-list-ul:before {
   content: "\f0ca";

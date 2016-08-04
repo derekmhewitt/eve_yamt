@@ -1,5 +1,6 @@
 .man-nav ul li {
-  color:white;
+  display: block;
+  width: 100%;
 }
 
 @media only screen and (min-width: 640px) {

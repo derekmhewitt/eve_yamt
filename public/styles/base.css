@@ -12,9 +12,6 @@ main {
 }
 
 nav {
-  /*width:auto;*/
-  /*margin-bottom: 30px;*/
-  /*color:white;*/
   font-size: 1.5em;
 }
 
@@ -34,25 +31,22 @@ button {
 a {
   text-decoration: none;
   color: #253139;
-  background-color: #9CA5A5;
+  font-family: 'eve_sans_neuebold';
+}
 
-}
-.main-nav {
-  /*display: none;*/
-}
 .tab {
-  margin:20px;
-  /*display:table-cell;*/
-  /*padding:auto;*/
+  width: 100%;
+  background-color: #9CA5A5;
 }
+
 #navigation {
   font-size: 18px;
 }
+
 .tab-content {
-  /*height: 300px;*/
-  /*width: 600px;*/
   margin-top: 50px;
 }
+
 .clearfix {
   clear: both;
 }
