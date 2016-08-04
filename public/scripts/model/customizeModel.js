@@ -18,13 +18,23 @@
       function(data) {
         console.log(data.val());
         customizeModel.queryResult = data.val();
+        customizeModel.validateItem();
       }
     );
   };
 
   customizeModel.validateItem = function() {
-    var temp = customizeModel.queryResult;
+    var temp = customizeModel.queryResult[Object.keys(customizeModel.queryResult)[0]].idNum;
+    console.log(temp);
     //pull itemId out and make a query to eve central with that id
+    $.get('https://api.eve-central.com/api/marketstat/json?hours=1&typeid=' + temp).done(function(data) {
+      console.log(data);
+      // if(/*query is valid*/) {
+      //   //do some stuff
+      // } else {
+      //   //display a message that your search result is a valid item, but unfortunately it's not for sale in EVE Online
+      // }
+    });
     //check if that id returns a valid market item
     //if so, display results and show option to add to dashboard
     //if not say invalid search, please try again
