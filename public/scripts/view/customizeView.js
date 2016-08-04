@@ -2,10 +2,13 @@
 (function(module) {
 
   var customizeView = {};
-  var customizeCompiler = Handlebars.compile($('#customize-template').text());
+  var customizeCompiledSource = $('#customize-template').html();
+  var customizeCompiledContent = Handlebars.compile(customizeCompiledSource);
 
-  customizeView.renderCustomize = function() {
-    $('').empty().append().withTheAttribute('name').map(customizeCompiler);
+  customizeView.renderCustomize = function(data) {
+    $('#customize-append').empty();
+    $('#customize-add-dashboard').show();
+    $('#customize-append').append(customizeCompiledContent(data));
   };
 
   // customizeObj.request(customizeView.renderCustomize);
