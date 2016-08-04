@@ -8,7 +8,18 @@ body {
 main {
   background-color: #253139;
 }
-
+nav {
+  width:auto;
+  margin-bottom: 30px;
+  color:white;
+  font-size: 18px;
+}
+.main-nav {
+color:white;  
+}
+#navigation {
+  font-size: 18px;
+}
 .tab-content {
   height: 300px;
   width: 600px;
