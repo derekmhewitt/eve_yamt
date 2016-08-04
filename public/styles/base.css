@@ -15,7 +15,12 @@ nav {
   font-size: 18px;
 }
 .main-nav {
-color:white;  
+  color:white;
+}
+.tab {
+  margin:20px;
+  display:table-cell;
+  padding:auto;
 }
 #navigation {
   font-size: 18px;
