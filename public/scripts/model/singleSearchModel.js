@@ -34,7 +34,7 @@
       if(data[0].all.avg > 0) {
         singleSearchModel.displayDataObject(data);
       } else {
-				console.log('not a valid search');
+        console.log('not a valid search');
         //display a message that your search result is a valid item, but unfortunately it's not for sale in EVE Online and do not render any data
       };
     });
