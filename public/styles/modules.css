@@ -1,7 +1,6 @@
 .main-nav-hamburger ul {
   display: none;
   padding: 0;
-  clear: both;
 }
 
 .main-nav-hamburger a {
@@ -41,8 +40,32 @@
   padding: .5em;
 }
 
-#single-search-append ul li {
+#single {
+  margin: 1em;
+}
+
+#single-search-append {
+  font-size: 1.5em;
+}
+
+#float-container {
+  margin-left: 1em;
+}
+
+.float-list {
   display: inline-block;
+  width: 30%;
+  margin-bottom: 1em;
+}
+
+#single-search-append .names {
+  width: 100%;
+  margin: 1em;
+  /*font-size: 1.5em;*/
+}
+
+.all {
+  margin-left: 1em;
 }
 
 #new-account {

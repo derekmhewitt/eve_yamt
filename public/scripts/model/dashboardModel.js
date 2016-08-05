@@ -19,7 +19,6 @@
           sellAvg: data[0].sell.avg.toFixed(2),
           sellMin: data[0].sell.min.toFixed(2)
         };
-        console.log('this is currentData', dashboardModel.finishedData);
       }).done(function() {
         dashboardView.renderDashboard(dashboardModel.finishedData);
       });

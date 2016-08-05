@@ -73,8 +73,10 @@
     <script id="single-search-template" type="text/x-handlebars-template">
       <ul>
         <li class="names"><span class="name-highlight">{{name}}</span></li>
-        <li>{{{symbol}}}</li>
-        <li>
+        <!-- <li>{{{symbol}}}</li> -->
+      </ul>
+      <ul id="float-container">
+        <li class="float-list">
           <h4><span class="highlight">All:</span></h4>
           <ul id="all-prices" class="prices-list">
             <li><span class="highlight">Max:</span> {{allMax}}</li>
@@ -82,7 +84,7 @@
             <li><span class="highlight">Min:</span> {{allMin}}</li>
           </ul>
         </li>
-        <li>
+        <li class="float-list">
           <h4><span class="highlight">Buy:</span></h4>
           <ul id="buy-prices" class="prices-list">
             <li><span class="highlight">Max:</span> {{buyMax}}</li>
@@ -90,7 +92,7 @@
             <li><span class="highlight">Min:</span> {{buyMin}}</li>
           </ul>
         </li>
-        <li>
+        <li class="float-list">
           <h4><span class="highlight">Sell:</span></h4>
           <ul id="sell-prices" class="prices-list">
             <li><span class="highlight">Max:</span> {{sellMax}}</li>
@@ -128,7 +130,7 @@
             <li class="tab" data-content="home" id="home-navigation"><a href="/">Home</a></li>
             <li class="tab" data-content="single-search" id="single-search-navigation"><a href="/single-search">Single Item Search</a></li>
             <li class="tab hidden" data-content="customize" id="customize-navigation"><a href="/user-page">User Dashboard</a></li>
-            <li class="tab" data-content="about" id="about-us-navigation"><a href="/about-us">About</a></li>
+            <li class="tab" data-content="about" id="about-us-navigation"><a href="/about-us">About Us</a></li>
             <li class="tab" data-content="about-eve" id="about-eve-navigation"><a href="/about-eve">About EVE Online</a></li>
             <li class="tab" data-content ="login" id="login-navigation"><a href="/login">Login</a></li>
           </ul>
@@ -139,7 +141,7 @@
           <li class="tab" data-content="home" id="home-navigation-exp"><a href="/">Home</a></li>
           <li class="tab" data-content="single-search" id="single-search-navigation-exp"><a href="/single-search">Single Item Search</a></li>
           <li class="tab hidden" data-content="customize" id="customize-navigation-exp"><a href="/user-page">User Dashboard</a></li>
-          <li class="tab" data-content="about" id="about-us-navigation-exp"><a href="/about-us">About</a></li>
+          <li class="tab" data-content="about" id="about-us-navigation-exp"><a href="/about-us">About Us</a></li>
           <li class="tab" data-content="about-eve" id="about-eve-navigation-exp"><a href="/about-eve">About EVE Online</a></li>
           <li class="tab" data-content ="login" id="login-navigation-exp"><a href="/login">Login</a></li>
         </ul>
@@ -238,13 +240,14 @@
           <a href="https://github.com/loganlsr">
             <span class="picture" id="logan"></span>
             <span id="logan_text">
-              <p>Logan Logan Logan Logan Logan Logan Logan Logan Logan</p>
+              <p>Logan is an avid anime and video game fan, a lover of beer and sports, and board games are a favorite thing of his to do when with friends.
+He writes and co-runs an anime and video game news/review site called Anime Arcade, so when not participating in any of the aforementioned activities, he’s probably working on his site!</p>
             </span>
           </a>
         </div>
       </section>
     </main>
-    <footer>
+    <footer class="clearfix">
       <p>&#169; 2016 CodeFellows EVE-YAMT</p>
       <p>Material related to EVE-Online is used with limited permission of CCP Games. No official affiliation or endorsement by CCP Games stated or implied.</p>
     </footer>
