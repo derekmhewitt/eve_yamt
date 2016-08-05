@@ -29,10 +29,6 @@
   background-color: #8DDFEE;
 }
 
-.index-template {
-  /*display:block;*/
-}
-
 .outer {
   width: 400px;
   margin: 2%;
@@ -48,7 +44,8 @@
 }
 
 #eve-logo {
-  display: inline;
+  float: left;
+  margin: .5em;
 }
 
 .index-names {
@@ -60,6 +57,14 @@
 
   .main-nav ul {
     display: block;
+  }
+
+  .main-nav li {
+    display: inline;
+  }
+
+  .main.nav a {
+    display: inline;
   }
 
 }
