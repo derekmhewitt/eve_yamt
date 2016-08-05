@@ -75,7 +75,7 @@
 
 #new-account * {
   display: inline-block;
-  margin: .5em 3em
+  margin: .5em 0;
 }
 
 #navigation {
