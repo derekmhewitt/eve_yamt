@@ -30,7 +30,7 @@
 }
 
 .index-template {
-  display:inline-block;
+  /*display:block;*/
 }
 
 .outer {
@@ -47,16 +47,13 @@
   background-size: 400px 400px;
 }
 
-#indexTable  {
-  margin-top:30px;
-  margin-bottom: 30px;
-  border-style: dotted;
-  border-width: medium;
-  border-color: rgb(213,0,0);
+#eve-logo {
+  display: inline;
 }
 
-#home ul li{
-  display:inline;
+.index-names {
+  display: block;
+  font-size: 1.5em;
 }
 
 @media only screen and (min-width: 640px) {

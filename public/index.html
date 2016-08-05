@@ -53,10 +53,8 @@
     <!-- *****************Handlebars Templates ******************** -->
     <script id="index-template" type="text/x-handlebars-template">
     <ul id="indexTable">
-      <li class="name-highlight">{{name}}</li>
-      <li><span class="highlight">Buy</span> {{buyAvg}}</li>
-      <li><span class="highlight">Sell</span> {{sellAvg}}</li>
-      <li>{{{symbol}}}</li>
+      <li class="index-names"><span class="name-highlight">{{name}}</span> {{{symbol}}}</li>
+      <li class="index-prices"><span class="highlight">Buy</span> {{buyAvg}} <span class="highlight">Sell</span> {{sellAvg}}</li>
     </ul>
     <br>
     </script>
@@ -123,6 +121,8 @@
   </head>
   <body>
     <header>
+      <img id="eve-logo" src="/vendor/images/eve_logo.png"/>
+      <h1>YAMT</h1>
     </header>
     <main>
       <!-- Nav Bar -->
