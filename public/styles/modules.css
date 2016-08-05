@@ -75,6 +75,11 @@
   padding-bottom: 3em;
 }
 
+#about-eve-video {
+  width: 300px;
+  height: auto;
+}
+
 .firebaseui-idp-icon {
   height: 3em;
   width: auto;
@@ -122,6 +127,11 @@
 
   .main-nav-expanded li:hover {
     background-color: #8DDFEE;
+  }
+
+  #about-eve-video {
+    width: 600px;
+    height: 400px;
   }
 
 }
