@@ -1,4 +1,9 @@
 
+h1 {
+  font-family: 'eve_sans_neue_expexpandedBd';
+  font-size: 3em;
+}
+
 body {
   min-width: 350px;
   max-width: 960px;
