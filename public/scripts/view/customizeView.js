@@ -10,5 +10,10 @@
     $('#customize-append').append(customizeCompiledContent(data));
   };
 
+  $('#hide-customize').on('click', function(event) {
+    event.preventDefault();
+    $('customize').toggleClass(hidden);
+  });
+
   module.customizeView = customizeView;
 })(window);

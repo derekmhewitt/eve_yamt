@@ -12,7 +12,7 @@
     } else {
       currentObject.symbol = '<i class="fa fa-exclamation-circle" aria-hidden="true"></i>';
     }
-    $('#home').append(indexContent(currentObject));
+    $('#home-append').append(indexContent(currentObject));
   };
 
   module.indexView = indexView;
