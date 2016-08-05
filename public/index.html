@@ -5,8 +5,8 @@
     <title>Eve YAMT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+    <!-- ***************** Initialize Firebase ******************** -->
     <script>
-      // Initialize Firebase
       var config = {
         apiKey: "AIzaSyBTDwhgmDUufkYuupiJBjYw_mW5GydYog8",
         authDomain: "eve-yamt.firebaseapp.com",
@@ -17,15 +17,11 @@
       var database = firebase.database();
     </script>
     <script src="https://www.gstatic.com/firebasejs/ui/live/0.4/firebase-ui-auth.js"></script>
-
     <script type="text/javascript">
-          // FirebaseUI config.
       var uiConfig = {
-        // Query parameter name for mode.
         'queryParameterForWidgetMode': 'mode',
-        // Query parameter name for sign in success url.
         'queryParameterForSignInSuccessUrl': 'signInSuccessUrl',
-        'signInSuccessUrl': '/marketplace',
+        'signInSuccessUrl': '/dashboard',
         'signInOptions': [
           // Leave the lines as is for the providers you want to offer your users.
           // firebase.auth.GoogleAuthProvider.PROVIDER_ID,
@@ -33,24 +29,18 @@
           // firebase.auth.TwitterAuthProvider.PROVIDER_ID,
           firebase.auth.EmailAuthProvider.PROVIDER_ID
         ],
-        // Terms of service url.
         'tosUrl': '/index.html',
         'callbacks': {
           'signInSuccess': function(currentUser, credential, redirectUrl) {
             firebase.User = currentUser;
-            // Do something.
-            // Return type determines whether we continue the redirect automatically
-            // or whether we leave that to developer to handle.
             return true;
           }
         }
       };
-
       var ui = new firebaseui.auth.AuthUI(firebase.auth());
-      // The start method will wait until the DOM is loaded.
       ui.start('#firebaseui-auth-container', uiConfig);
     </script>
-    <!-- *****************Handlebars Templates ******************** -->
+    <!-- ***************** Handlebars Templates ******************** -->
     <script id="index-template" type="text/x-handlebars-template">
     <ul id="indexTable">
       <li class="index-names"><span class="name-highlight">{{name}}</span> {{{symbol}}}</li>
@@ -140,7 +130,9 @@
       </nav>
          <!-- Content Sections -->
      <section id="home" class="tab-content">
-       <h2></h2>
+       <h2>Yet Another Market Tool</h2>
+       <div id="home-append">
+       </div>
      </section>
      <section id="login" class="tab-content">
      <!-- <h2>This is the login section!</h2> -->
@@ -153,7 +145,7 @@
        </form>
      </section>
      <section id="single-search" class="search-content tab-content">
-       <h2>This is the single search page that will show the results of a single item query at a time</h2>
+       <h2>The single search page that will show the results of a single item query at a time.</h2>
        <form>
          <input id="single" required>
          <button id="single-button">Search</button>
@@ -162,22 +154,17 @@
        </div>
      </section>
     <section id="user-page" class="tab-content">
-       <h2>This is user page where customize and dashboard live</h2>
-       <nav>
-         <ul>
-           <li class="search-tab" data-content="customize" id="search-navigation"><a href="/customize">Customize</a></li>
-           <li class="search-tab" data-content="dashboard" id="search-navigation"><a href="/dashboard">Dashboard</a></li>
-         </ul>
-       </nav>
+      <h2>Welcome to your Dashboard!</h2>
+      <button id="hide-customize">Hide the customization interface</button>
       <section id="customize" class="search-content">
         <form id="customize-form">
           <input id="customize-input" placeholder="Search For An Item Here"></input>
           <button id="customize-button">Search</button>
         </form>
         <form>
-        <div id="customize-append">
-        </div>
-        <button class="hidden" id="customize-add-dashboard">Add to Dashboard</button>
+          <div id="customize-append">
+          </div>
+          <button class="hidden" id="customize-add-dashboard">Add to Dashboard</button>
         </form>
       </section>
       <section id="dashboard" class="search-content">
@@ -185,11 +172,12 @@
         <p>Hi user!  Welcome to your dashboard.  Some words here about how you'll customize this page</p>
         <div id="dashboard-append">
         </div>
+        <button id="clear-dashboard">Clear Dashboard</button>
       </section>
-      </section>
-      <section id="about-eve" class="tab-content">
-        <h2>About EVE will go here...</h2>
-      </section>
+    </section>
+    <section id="about-eve" class="tab-content">
+      <h2>About EVE will go here...</h2>
+    </section>
       <section id="about-us" class="tab-content">
         <h2>Meet The Devs</h2>
           <div class="outer" id="firstOne">

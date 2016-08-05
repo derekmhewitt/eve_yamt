@@ -11,10 +11,12 @@
     if(user) {
       loginController.user = firebase.auth().currentUser;
       $('#customize-navigation').show();
+      $('#single-search-navigation').show();
       loginView.loggedIn();
       dashboardController.listener();
     } else {
       $('#customize-navigation').hide();
+      $('#single-search-navigation').hide();
       loginView.loggedOut();
     }
   });
