@@ -1,4 +1,3 @@
-
 (function(module) {
 
   page('/', indexController.index);

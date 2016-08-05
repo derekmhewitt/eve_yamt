@@ -1,4 +1,3 @@
-
 (function(module){
 
   var indexController = {
@@ -9,5 +8,4 @@
   };
 
   module.indexController = indexController;
-
 })(window);

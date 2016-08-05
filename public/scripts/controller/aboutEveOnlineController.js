@@ -1,4 +1,3 @@
-
 (function(module){
 
   var aboutEveOnlineController = {
@@ -9,5 +8,4 @@
   };
 
   module.aboutEveOnlineController = aboutEveOnlineController;
-
 })(window);

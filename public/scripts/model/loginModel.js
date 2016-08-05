@@ -1,13 +1,4 @@
 (function(module) {
-  loginModel = {};
-
-  // function User() {
-  //   this.userID = '';
-  //   this.userEmail = '';
-  //   this.userPassword = '';
-  //   this.dashboardData = [];
-  // }
-
   var loginModel = {};
 
   $('#new-account-form-submit').on('click', function(event) {
@@ -37,7 +28,7 @@
       loginView.loggedOut();
       page('/');
     }, function(error) {
-      console.log('error signing out: ', error);
+      console.log('Error signing out: ', error);
     });
   };
 

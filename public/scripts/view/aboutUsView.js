@@ -1,4 +1,3 @@
-
 (function(module) {
 
   var aboutUsView = {};
@@ -8,7 +7,5 @@
     $('').empty.append();
   };
 
-  // aboutUsObj.requestInfo(aboutUsView, renderInfo);
   module.aboutUsView = aboutUsView;
-
 })(window);
