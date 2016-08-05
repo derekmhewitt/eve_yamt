@@ -43,59 +43,59 @@
     <!-- ***************** Handlebars Templates ******************** -->
     <script id="index-template" type="text/x-handlebars-template">
     <ul id="indexTable">
-      <li class="index-names"><span class="name-highlight">{{name}}</span> {{{symbol}}}</li>
+      <li class="names"><span class="name-highlight">{{name}}</span> {{{symbol}}}</li>
       <li class="index-prices"><span class="highlight">Buy</span> {{buyAvg}} <span class="highlight">Sell</span> {{sellAvg}}</li>
     </ul>
     <br>
     </script>
     <script id="dashboard-template" type="text/x-handlebars-template">
       <ul>
-        <li>Name: {{name}}</li>
-        <li>All Average: {{allAvg}}</li>
-        <li>All Max: {{allMax}}</li>
-        <li>All Min: {{allMin}}</li>
-        <li>Buy Avg: {{buyAvg}}</li>
-        <li>Buy Max: {{buyMax}}</li>
-        <li>Buy Min: {{buyMin}}</li>
-        <li>Sell Avg: {{sellAvg}}</li>
-        <li>Sell Max: {{sellMax}}</li>
-        <li>Sell Min: {{sellMin}}</li>
+        <li class="names"><span class="name-highlight">{{name}}</span></li>
+        <li><span class="highlight">All Average:</span> {{allAvg}}</li>
+        <li><span class="highlight">All Max:</span> {{allMax}}</li>
+        <li><span class="highlight">All Min:</span> {{allMin}}</li>
+        <li><span class="highlight">Buy Avg:</span> {{buyAvg}}</li>
+        <li><span class="highlight">Buy Max:</span> {{buyMax}}</li>
+        <li><span class="highlight">Buy Min:</span> {{buyMin}}</li>
+        <li><span class="highlight">Sell Avg:</span> {{sellAvg}}</li>
+        <li><span class="highlight">Sell Max:</span> {{sellMax}}</li>
+        <li><span class="highlight">Sell Min:</span> {{sellMin}}</li>
       </ul>
     </script>
     <script id="customize-template" type="text/x-handlebars-template">
       <ul>
-        <li>Name: {{name}}</li>
-        <li>Average: {{avg}}</li>
-        <li>Max: {{max}}</li>
-        <li>Min: {{min}}</li>
+        <li><span class="highlight">Name:</span> {{name}}</li>
+        <li><span class="highlight">Average:</span> {{avg}}</li>
+        <li><span class="highlight">Max:</span> {{max}}</li>
+        <li><span class="highlight">Min:</span> {{min}}</li>
       </ul>
     </script>
     <script id="single-search-template" type="text/x-handlebars-template">
       <ul>
-        <li>{{name}}</li>
+        <li class="names"><span class="name-highlight">{{name}}</span></li>
         <li>{{{symbol}}}</li>
         <li>
-          <h4>All:</h4>
+          <h4><span class="highlight">All:</span></h4>
           <ul id="all-prices" class="prices-list">
-            <li>Max: {{allMax}}</li>
-            <li>Avg: {{allAvg}}</li>
-            <li>Min: {{allMin}}</li>
+            <li><span class="highlight">Max:</span> {{allMax}}</li>
+            <li><span class="highlight">Avg:</span> {{allAvg}}</li>
+            <li><span class="highlight">Min:</span> {{allMin}}</li>
           </ul>
         </li>
         <li>
-          <h4>Buy:</h4>
+          <h4><span class="highlight">Buy:</span></h4>
           <ul id="buy-prices" class="prices-list">
-            <li>Max: {{buyMax}}</li>
-            <li>Avg: {{buyAvg}}</li>
-            <li>Min: {{buyMin}}</li>
+            <li><span class="highlight">Max:</span> {{buyMax}}</li>
+            <li><span class="highlight">Avg:</span> {{buyAvg}}</li>
+            <li><span class="highlight">Min:</span> {{buyMin}}</li>
           </ul>
         </li>
         <li>
-          <h4>Sell:</h4>
+          <h4><span class="highlight">Sell:</span></h4>
           <ul id="sell-prices" class="prices-list">
-            <li>Max: {{sellMax}}</li>
-            <li>Avg: {{sellAvg}}</li>
-            <li>Min: {{sellMin}}</li>
+            <li><span class="highlight">Max:</span> {{sellMax}}</li>
+            <li><span class="highlight">Avg:</span> {{sellAvg}}</li>
+            <li><span class="highlight">Min:</span> {{sellMin}}</li>
           </ul>
         </li>
       </ul>
@@ -117,7 +117,8 @@
   <body>
     <header>
       <a href="/"><img id="eve-logo" src="/vendor/images/eve_logo.png"/></a>
-      <h1>YAMT</h1>
+      <h1 id="abbr">YAMT</h1>
+      <h1 id="full-title"><span class="highlight">Y</span>et <span class="highlight">A</span>nother <span class="highlight">M</span>arket <span class="highlight">T</span>ool</h1>
     </header>
     <main>
       <!-- Nav Bar -->
@@ -146,7 +147,7 @@
 
          <!-- Content Sections -->
      <section id="home" class="tab-content">
-       <h2>Yet Another Market Tool</h2>
+       <!-- <h2>Yet Another Market Tool</h2> -->
        <div id="home-append">
        </div>
      </section>
@@ -174,7 +175,7 @@
       <button id="hide-customize">Hide the customization interface</button>
       <section id="customize" class="">
         <form id="customize-form">
-          <input id="customize-input" placeholder="Search For An Item Here"></input>
+          <input id="customize-input" placeholder="Search For An Item"></input>
           <button id="customize-button">Search</button>
         </form>
         <form>

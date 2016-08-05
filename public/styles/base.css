@@ -7,6 +7,34 @@ h1 {
   font-size: 3.5em;
 }
 
+h2 {
+  font-family: 'eve_sans_neuebold';
+  text-align: center;
+  font-size: 2.5em;
+  color: #758B90;
+}
+
+p {
+  font-size: 1.25em;
+  padding: .5em 1em;
+}
+
+header #abbr {
+  display: block;
+}
+
+header:hover #abbr {
+  display: none;
+}
+
+header #full-title {
+  display: none;
+}
+
+header:hover #full-title {
+  display: block;
+}
+
 body {
   font-family: 'eve_sans_neuebold';
   color: #9CA5A5;
@@ -51,8 +79,11 @@ footer {
   text-align: center;
 }
 
-#navigation {
-  font-size: 18px;
+input {
+  display: inline-block;
+  border: none;
+  font-size: 2em;
+  font-family: 'eve_sans_neuebold';
 }
 
 .clearfix {
