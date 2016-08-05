@@ -5,17 +5,13 @@
 
 	$('#single-button').on('click', function(event) {
 		event.preventDefault();
-		console.log('singleSearchModel click');
 		singleSearchModel.queryValue = $('#single').val();
-		console.log(singleSearchModel.queryValue);
 		singleSearchModel.queryDatabase(singleSearchModel.queryValue);
 	});
 
   singleSearchModel.queryDatabase = function(queryValue) {
-    console.log('queryDatabase function', queryValue);
     database.ref('/itemData/').orderByChild('itemName').equalTo(queryValue).once('value').then(
       function(data) {
-        console.log('this is data.val()', data.val());
         singleSearchModel.queryResult = data.val();
         singleSearchModel.validateItem();
       }
@@ -25,24 +21,17 @@
   singleSearchModel.validateItem = function() {
     singleSearchModel.currentQueryId = singleSearchModel.queryResult[Object.keys(singleSearchModel.queryResult)[0]].idNum;
     singleSearchModel.currentQueryName = singleSearchModel.queryResult[Object.keys(singleSearchModel.queryResult)[0]].itemName;
-    console.log(singleSearchModel.currentQueryId);
-    console.log(singleSearchModel.currentQueryName);
-    //pull itemId out and make a query to eve central with that id
     $.get('https://api.eve-central.com/api/marketstat/json?hours=1&typeid=' + singleSearchModel.currentQueryId).done(function(data) {
-      console.log(data);
-      console.log(data[0].all.avg);
       if(data[0].all.avg > 0) {
         singleSearchModel.displayDataObject(data);
       } else {
-        console.log('not a valid search');
-        //display a message that your search result is a valid item, but unfortunately it's not for sale in EVE Online and do not render any data
+        $('#single-search-append').empty();
+        $('#single-search-append').html('Sorry that item is not for sale!');
       };
     });
   };
 
   singleSearchModel.displayDataObject = function(oneHour) {
-    // $.get('https://api.eve-central.com/api/marketstat/json?hours=1&typeid=' + xxx.idnum)
-    // .done(function(oneHour) {
     $.get('https://api.eve-central.com/api/marketstat/json?hours=2&typeid=' + singleSearchModel.currentQueryId).done(function(twoHour) {
       var singleCurrentObject = {
         name: singleSearchModel.currentQueryName,
@@ -61,9 +50,7 @@
       };
       singleSearchView.render(singleCurrentObject);
     });
-    // });
   };
-	// singleSearchModel.displayDataObject();
 
   module.singleSearchModel = singleSearchModel;
 })(window);

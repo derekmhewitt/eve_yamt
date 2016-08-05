@@ -1,4 +1,3 @@
-
 (function(module){
 
   var singleSearchController = {
@@ -9,5 +8,4 @@
   };
 
   module.singleSearchController = singleSearchController;
-
 })(window);
