@@ -41,8 +41,20 @@
   padding: .5em;
 }
 
+#single-search-append {
+  font-size: 1.5em;
+}
+
 #single-search-append ul li {
   display: inline-block;
+  width: 24%;
+  /*font-size: 1.5em;*/
+}
+
+#single-search-append .names {
+  width: 100%;
+  margin: 1em;
+  /*font-size: 1.5em;*/
 }
 
 #new-account {
