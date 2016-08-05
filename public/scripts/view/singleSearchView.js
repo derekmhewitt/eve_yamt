@@ -1,7 +1,7 @@
 
 (function(module) {
-
   var singleSearchView = {};
+
   var singleSearchSource = $('#single-search-template').html();
   var singleSearchContent = Handlebars.compile(singleSearchSource);
 
@@ -19,5 +19,4 @@
   };
 
   module.singleSearchView = singleSearchView;
-
 })(window);

@@ -1,4 +1,3 @@
-
 (function(module){
 
   var userController = {
@@ -9,5 +8,4 @@
   };
 
   module.userController = userController;
-
 })(window);

@@ -1,7 +1,6 @@
-
 (function(module) {
-
   var indexView = {};
+
   var indexSource = $('#index-template').html();
   var indexContent = Handlebars.compile(indexSource);
 
@@ -17,5 +16,4 @@
   };
 
   module.indexView = indexView;
-
 })(window);

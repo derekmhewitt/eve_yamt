@@ -1,6 +1,5 @@
 (function(module) {
-
-  loginView = {};
+  var loginView = {};
 
   loginView.loggedOut = function() {
     $('#firebaseui-auth-container').fadeIn();

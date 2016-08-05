@@ -20,5 +20,4 @@
   });
 
   module.loginController = loginController;
-
 })(window);

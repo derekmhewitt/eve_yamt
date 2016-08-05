@@ -1,4 +1,3 @@
-
 (function(module){
 
   var aboutUsController = {
@@ -9,5 +8,4 @@
   };
 
   module.aboutUsController = aboutUsController;
-
 })(window);

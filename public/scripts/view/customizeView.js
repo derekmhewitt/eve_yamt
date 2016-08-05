@@ -1,4 +1,3 @@
-
 (function(module) {
 
   var customizeView = {};
@@ -11,7 +10,5 @@
     $('#customize-append').append(customizeCompiledContent(data));
   };
 
-  // customizeObj.request(customizeView.renderCustomize);
   module.customizeView = customizeView;
-
 })(window);

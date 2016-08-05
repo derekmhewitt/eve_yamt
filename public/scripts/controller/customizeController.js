@@ -1,4 +1,3 @@
-
 (function(module){
 
   var customizeController = {
@@ -9,5 +8,4 @@
   };
 
   module.customizeController = customizeController;
-
 })(window);
