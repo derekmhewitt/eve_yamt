@@ -29,6 +29,10 @@
   background-color: #8DDFEE;
 }
 
+.main-nav-expanded {
+  display: none;
+}
+
 .outer {
   width: 400px;
   margin: 2%;
@@ -58,17 +62,38 @@
   .fa-bars {
     display: none;
   }
-/*
-  .main-nav ul {
+  .main-nav-hamburger {
+    display: none;
+  }
+
+  .main-nav-expanded {
     display: block;
   }
 
-  .main-nav li {
-    display: inline;
+  .main-nav-expanded ul {
+    padding: 1em 1em;
   }
 
-  .main.nav a {
+  .main-nav-expanded li {
+    padding: .5em 1em;
+  }
+
+  .main-nav-expanded ul li:first-child {
+    border-radius: 3px 0px 0px 3px;
+  }
+
+  .main-nav-expanded ul li:last-child {
+    border-radius: 0px 3px 3px 0px;
+  }
+
+  .main-nav-expanded li {
     display: inline;
-  }*/
+    background-color: #9CA5A5;
+    margin-top: 1em;
+  }
+
+  .main-nav-expanded li:hover {
+    background-color: #8DDFEE;
+  }
 
 }
