@@ -12,11 +12,15 @@
       loginController.user = firebase.auth().currentUser;
       $('#customize-navigation').show();
       $('#single-search-navigation').show();
+      $('#customize-navigation-exp').show();
+      $('#single-search-navigation-exp').show();
       loginView.loggedIn();
       dashboardController.listener();
     } else {
       $('#customize-navigation').hide();
       $('#single-search-navigation').hide();
+      $('#customize-navigation-exp').hide();
+      $('#single-search-navigation-exp').hide();
       loginView.loggedOut();
     }
   });
