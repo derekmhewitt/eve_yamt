@@ -2,7 +2,6 @@
   /*outline: 1px dotted orange;*/
 }
 
-
 h1 {
   font-family: 'eve_sans_neue_expexpandedBd';
   font-size: 3.5em;
@@ -59,8 +58,10 @@ a {
   display: none;
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 970px) {
 
-
+  body {
+    background-image: url('../vendor/images/planet_view_screen.jpg');
+  }
 
 }

@@ -736,6 +736,7 @@
 .fa-navicon:before,
 .fa-reorder:before,
 .fa-bars:before {
+  margin: .5em;
   content: "\f0c9";
   font-size: 2em;
   color:#9CA5A5;
