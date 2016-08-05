@@ -1,16 +1,23 @@
+* {
+  /*outline: 1px dotted orange;*/
+}
+
 
 h1 {
   font-family: 'eve_sans_neue_expexpandedBd';
-  font-size: 3em;
+  font-size: 3.5em;
 }
 
 body {
-  min-width: 350px;
-  max-width: 960px;
   font-family: 'eve_sans_neuebold';
+  color: #9CA5A5;
   background-image: url('../vendor/images/planet_view_phone.jpg');
   background-size: 100%;
-  color: #9CA5A5;
+  width: 80%;
+  min-width: 350px;
+  max-width: 960px;
+  border-radius: 5px;
+  margin: 0 auto;
 }
 
 main {
@@ -46,4 +53,16 @@ a {
 
 .clearfix {
   clear: both;
+}
+
+.hidden {
+  display: none;
+}
+
+@media only screen and (min-width: 640px) {
+
+  body {
+
+  }
+
 }
