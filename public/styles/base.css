@@ -45,6 +45,11 @@ a {
   color: #253139;
   font-family: 'eve_sans_neuebold';
 }
+footer {
+  margin-top: 30px;
+  background-color: #253139;
+  text-align: center;
+}
 
 #navigation {
   font-size: 18px;
