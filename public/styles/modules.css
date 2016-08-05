@@ -29,49 +29,65 @@
   background-color: #8DDFEE;
 }
 
-.main-nav-expanded {
-  display: none;
-}
-
-.outer {
-  width: 400px;
-  margin: 2%;
-  border: 5px solid #111b35;
-  border-radius: 5px;
-}
-
-.picture {
-  width: 400px;
-  height: 200px;
-  margin-bottom: 15px;
-  background-size: 400px 400px;
-}
-
 #eve-logo {
   float: left;
   margin: .5em;
 }
 
-.index-names {
-  display: block;
-  font-size: 1.5em;
+#indexTable {
+  text-align: center;
+  font-size: 1.3em;
+  line-height: 1.5em;
+  padding: .5em;
+}
+
+#single-search-append ul li {
+  display: inline-block;
+}
+
+#new-account {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#new-account * {
+  display: inline-block;
+  margin: .5em 3em
+}
+
+#navigation {
+  font-size: 18px;
+}
+
+#login {
+  padding-bottom: 3em;
+}
+
+.firebaseui-idp-icon {
+  height: 3em;
+  width: auto;
+  color: #253139;
+}
+
+.firebaseui-idp-text.firebaseui-idp-text-long {
+  font-family: 'eve_sans_neuebold';
+  color: #253139;
+}
+
+.firebaseui-idp-button {
+  background-color: #8DDFEE;
+  color: #253139;
+}
+
+.firebaseui-idp-password:hover {
+  background-color: #9CA5A5;
 }
 
 @media only screen and (min-width: 970px) {
 
-  .fa-bars {
-    display: none;
-  }
-  .main-nav-hamburger {
-    display: none;
-  }
-
-  .main-nav-expanded {
-    display: block;
-  }
-
   .main-nav-expanded ul {
-    padding: 1em 1em;
+    padding: 1em;
+    text-align: center;
   }
 
   .main-nav-expanded li {

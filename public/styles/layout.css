@@ -7,14 +7,45 @@
   color: #7295A1;
 }
 
-#indexTable {
-  /*margin: .5em auto;*/
-  text-align: center;
-  font-size: 1.3em;
-  line-height: 1.5em;
-  padding: .5em;
+.main-nav-expanded {
+  display: none;
+}
+
+.outer {
+  width: 400px;
+  margin: 2%;
+  border: 5px solid #111b35;
+  border-radius: 5px;
+}
+
+.picture {
+  width: 400px;
+  height: 200px;
+  margin-bottom: 15px;
+  background-size: 400px 400px;
+}
+
+.names {
+  display: block;
+  font-size: 1.5em;
+}
+
+.prices-list {
+  display: inline;
+  font-size: 1em;
 }
 
 @media only screen and (min-width: 970px) {
+
+  .fa-bars {
+    display: none;
+  }
+  .main-nav-hamburger {
+    display: none;
+  }
+
+  .main-nav-expanded {
+    display: block;
+  }
 
 }
