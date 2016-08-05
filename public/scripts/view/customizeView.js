@@ -12,7 +12,8 @@
 
   $('#hide-customize').on('click', function(event) {
     event.preventDefault();
-    $('customize').toggleClass(hidden);
+    console.log('clicked!');
+    $('#customize').toggleClass('hidden');
   });
 
   module.customizeView = customizeView;

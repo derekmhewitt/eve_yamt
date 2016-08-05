@@ -6,6 +6,7 @@
     $('#new-account').fadeIn();
     $('#signed-in').hide();
     $('#login-navigation').html('<a href="/login">Login</a>');
+    $('#login-navigation-exp').html('<a href="/login">Login</a>');
   };
 
   loginView.loggedIn = function() {
@@ -13,6 +14,7 @@
     $('#firebaseui-auth-container').hide();
     $('#new-account').hide();
     $('#login-navigation').html('<a href="/login">Log Out</a>');
+    $('#login-navigation-exp').html('<a href="/login">Log Out</a>');
   };
 
   module.loginView = loginView;

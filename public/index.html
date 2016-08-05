@@ -21,7 +21,7 @@
       var uiConfig = {
         'queryParameterForWidgetMode': 'mode',
         'queryParameterForSignInSuccessUrl': 'signInSuccessUrl',
-        'signInSuccessUrl': '/dashboard',
+        'signInSuccessUrl': '/user-page',
         'signInOptions': [
           // Leave the lines as is for the providers you want to offer your users.
           // firebase.auth.GoogleAuthProvider.PROVIDER_ID,
@@ -116,7 +116,7 @@
   </head>
   <body>
     <header>
-      <img id="eve-logo" src="/vendor/images/eve_logo.png"/>
+      <a href="/"><img id="eve-logo" src="/vendor/images/eve_logo.png"/></a>
       <h1>YAMT</h1>
     </header>
     <main>
@@ -135,12 +135,12 @@
       </nav>
       <nav class="main-nav-expanded">
         <ul>
-          <li class="tab" data-content="home" id="home-navigation"><a href="/">Home</a></li>
-          <li class="tab" data-content="single-search" id="single-search-navigation"><a href="/single-search">Single Item Search</a></li>
-          <li class="tab hidden" data-content="customize" id="customize-navigation"><a href="/user-page">User Dashboard</a></li>
-          <li class="tab" data-content="about" id="about-us-navigation"><a href="/about-us">About</a></li>
-          <li class="tab" data-content="about-eve" id="about-eve-navigation"><a href="/about-eve">About EVE Online</a></li>
-          <li class="tab" data-content ="login" id="login-navigation"><a href="/login">Login</a></li>
+          <li class="tab" data-content="home" id="home-navigation-exp"><a href="/">Home</a></li>
+          <li class="tab" data-content="single-search" id="single-search-navigation-exp"><a href="/single-search">Single Item Search</a></li>
+          <li class="tab hidden" data-content="customize" id="customize-navigation-exp"><a href="/user-page">User Dashboard</a></li>
+          <li class="tab" data-content="about" id="about-us-navigation-exp"><a href="/about-us">About</a></li>
+          <li class="tab" data-content="about-eve" id="about-eve-navigation-exp"><a href="/about-eve">About EVE Online</a></li>
+          <li class="tab" data-content ="login" id="login-navigation-exp"><a href="/login">Login</a></li>
         </ul>
       </nav>
 
@@ -172,7 +172,7 @@
     <section id="user-page" class="tab-content">
       <h2>Welcome to your Dashboard!</h2>
       <button id="hide-customize">Hide the customization interface</button>
-      <section id="customize" class="search-content">
+      <section id="customize" class="">
         <form id="customize-form">
           <input id="customize-input" placeholder="Search For An Item Here"></input>
           <button id="customize-button">Search</button>
@@ -183,9 +183,9 @@
           <button class="hidden" id="customize-add-dashboard">Add to Dashboard</button>
         </form>
       </section>
-      <section id="dashboard" class="search-content">
-        <h2>Dashboard! Woo!</h2>
-        <p>Hi user!  Welcome to your dashboard.  Search for items in the Customize boxes above to add them to your dashboard here.</p>
+      <section id="dashboard">
+        <h2>Welcome to your Dashboard</h2>
+        <p>Hi user!  Search for items in the Customize boxes above to add them to your dashboard here.</p>
         <div id="dashboard-append">
         </div>
         <button id="clear-dashboard">Clear Dashboard</button>
